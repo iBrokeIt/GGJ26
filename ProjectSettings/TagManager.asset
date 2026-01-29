@@ -12,6 +12,9 @@ TagManager:
   - 
   - Water
   - UI
+  - World_A
+  - World_B
+  - World_C
   - 
   - 
   - 
@@ -23,10 +26,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Player
   - 
   - 
   - 
