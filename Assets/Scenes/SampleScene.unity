@@ -179,7 +179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 0.1
+  jumpForce: 4
+  jumpAssist: 6
   jumpDuration: 0.35
   moveAction: {fileID: 99806590}
   jumpAction: {fileID: 1799820732}
