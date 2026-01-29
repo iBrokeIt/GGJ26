@@ -4,17 +4,22 @@ using UnityEngine.InputSystem;
 public class PlayerContoller : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float jumpForce = 10f;
+    public float jumpForce = 100f;
+    public float jumpDuration = 0.35f;
 
     public InputActionReference moveAction;
     public InputActionReference jumpAction;
-    private bool isGrounded = false;
+    private bool isGrounded;
+    private bool isJumping;
+    private float jumpTimeCounter;
 
     Rigidbody2D rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        isGrounded = false;
+        isJumping = false;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -22,24 +27,42 @@ public class PlayerContoller : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))
         {
             isGrounded = true;
+            isJumping = false;
         }
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        isGrounded = false;
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = false;
+            if (isJumping)
+            {
+                jumpTimeCounter = jumpDuration;
+            }
+        }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // If no InputAction assigned, fall back to keyboard/gamepad probing
         Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
-        rb.linearVelocity = new Vector2(moveInput.x, 0) * moveSpeed;
+        rb.linearVelocityX = moveInput.x * moveSpeed;
         float jumpInput = jumpAction.action.ReadValue<float>();
-        if (jumpInput > 0.1f && isGrounded)
+        if (jumpInput > 0.1f && isGrounded && !isJumping)
         {
+            isJumping = true;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
+        // if (jumpTimeCounter > 0 && jumpInput > 0.1f)
+        // {
+        //     rb.AddForce(Vector2.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
+        //     jumpTimeCounter -= Time.deltaTime;
+        //     if (jumpTimeCounter <= 0)
+        //     {
+        //         isJumping = false;
+        //     }
+        // }
     }
 
 }
