@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class DimensionSwitcher : MonoBehaviour
 {
+    private static Color[] WORLD_COLORS = {
+    Color.cyan,
+    Color.magenta,
+    Color.yellow
+};
+
     [System.Serializable]
     public class Dimension
     {
@@ -92,7 +98,7 @@ public class DimensionSwitcher : MonoBehaviour
         Debug.Log($"Switching to {dim.name}");
 
         mainCam.cullingMask = commonLayers | dim.uniqueLayerMask | playerLayerMask;
-
+        mainCam.backgroundColor = WORLD_COLORS[index];
         EnablePhysicsForLayer(dim.calculatedLayerIndex);
     }
 
