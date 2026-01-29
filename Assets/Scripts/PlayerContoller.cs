@@ -4,7 +4,9 @@ using UnityEngine.InputSystem;
 public class PlayerContoller : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float jumpForce = 100f;
+    public float jumpForce;
+    public float jumpAssist;
+
     public float jumpDuration = 0.35f;
 
     public InputActionReference moveAction;
@@ -54,15 +56,11 @@ public class PlayerContoller : MonoBehaviour
             isJumping = true;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
-        // if (jumpTimeCounter > 0 && jumpInput > 0.1f)
-        // {
-        //     rb.AddForce(Vector2.up * jumpForce * Time.deltaTime, ForceMode2D.Impulse);
-        //     jumpTimeCounter -= Time.deltaTime;
-        //     if (jumpTimeCounter <= 0)
-        //     {
-        //         isJumping = false;
-        //     }
-        // }
+        if (jumpTimeCounter > 0 && jumpInput > 0.1f)
+        {
+            rb.AddForce(Vector2.up * jumpAssist * Time.deltaTime, ForceMode2D.Impulse);
+            jumpTimeCounter -= Time.deltaTime;
+        }
     }
 
 }
