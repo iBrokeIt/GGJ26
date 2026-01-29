@@ -4,12 +4,16 @@ public class ElevatorLogic : MonoBehaviour
 {
 
     public Transform posA, posB;
-    public float speed = 2f;     
+    public float speed = 2f;   
+    
+    private Rigidbody2D rb;
     Vector3 targetPos;           
 
     void Start()
     {
         targetPos = posB.position;
+        rb = GetComponent<Rigidbody2D>();
+
     }
 
     void Update()
@@ -20,7 +24,7 @@ public class ElevatorLogic : MonoBehaviour
             targetPos = (targetPos == posA.position) ? posB.position : posA.position;
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        rb.MovePosition(Vector2.MoveTowards(transform.position, targetPos, speed * Time.deltaTime));
     }
 
 
