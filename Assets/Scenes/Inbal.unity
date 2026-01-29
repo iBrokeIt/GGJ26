@@ -352,7 +352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &349176543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -468,7 +468,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToDisappear: 2
   timeToAppear: 5
-  startDisappeared: 0
 --- !u!4 &349176546
 Transform:
   m_ObjectHideFlags: 0
@@ -667,7 +666,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &560454415
 Transform:
   m_ObjectHideFlags: 0
