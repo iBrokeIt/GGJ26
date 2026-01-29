@@ -17,11 +17,14 @@ public class PlayerContoller : MonoBehaviour
 
     Rigidbody2D rb;
 
+    Rigidbody2D platformRb;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         isGrounded = false;
         isJumping = false;
+        platformRb = null;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -30,6 +33,10 @@ public class PlayerContoller : MonoBehaviour
         {
             isGrounded = true;
             isJumping = false;
+        }
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            platformRb = collision.gameObject.GetComponent<Rigidbody2D>();
         }
     }
 
@@ -43,13 +50,21 @@ public class PlayerContoller : MonoBehaviour
                 jumpTimeCounter = jumpDuration;
             }
         }
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            platformRb = null;
+        }
     }
 
     void FixedUpdate()
     {
         // If no InputAction assigned, fall back to keyboard/gamepad probing
         Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
-        rb.linearVelocityX = moveInput.x * moveSpeed;
+        float baseVelocityX = moveInput.x * moveSpeed;
+        if (platformRb != null) {
+            baseVelocityX += platformRb.linearVelocityX;
+        }
+        rb.linearVelocityX = baseVelocityX;
         float jumpInput = jumpAction.action.ReadValue<float>();
         if (jumpInput > 0.1f && isGrounded && !isJumping)
         {
