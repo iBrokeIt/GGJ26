@@ -33,9 +33,6 @@ public class PlayerContoller : MonoBehaviour
         {
             isGrounded = true;
             isJumping = false;
-        }
-        if (collision.gameObject.CompareTag("Platform"))
-        {
             platformRb = collision.gameObject.GetComponent<Rigidbody2D>();
         }
     }
@@ -49,9 +46,6 @@ public class PlayerContoller : MonoBehaviour
             {
                 jumpTimeCounter = jumpDuration;
             }
-        }
-        if (collision.gameObject.CompareTag("Platform"))
-        {
             platformRb = null;
         }
     }
