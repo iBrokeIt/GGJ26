@@ -1,64 +1,113 @@
-using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class MaskSwitcer : MonoBehaviour
+public class DimensionSwitcher : MonoBehaviour
 {
-    public LayerMask WORLD_A_LAYERS;
-    public LayerMask WORLD_B_LAYERS;
-    public LayerMask WORLD_C_LAYERS;
-    
-    private int playerLayer = 0;
-    private int worldALayer = 6;
-    private int worldBLayer = 7;
-    private int worldCLayer = 8;
-    public Camera mainCam;
-
-    private LayerMask[] cameraLayers;
-    private int[] physicsLayers;
-    private int currentLayerIndex = 0;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    [System.Serializable]
+    public class Dimension
     {
-        cameraLayers = new LayerMask[] { WORLD_A_LAYERS, WORLD_B_LAYERS, WORLD_C_LAYERS };
-        physicsLayers = new int[] { worldALayer, worldBLayer, worldCLayer };
-        SetCameraMask(cameraLayers[0]);
-        EnablePhysicsForLayer(physicsLayers[0]);
-        DisablePhysicsForLayer(physicsLayers[1]);
-        DisablePhysicsForLayer(physicsLayers[2]);  
+        public string name;
+        [Tooltip("Select ONLY the specific layer for this world (e.g., World_A)")]
+        public LayerMask uniqueLayerMask; 
+        
+        [HideInInspector] public int calculatedLayerIndex;
     }
 
+    [Header("Configuration")]
+    public Camera mainCam;
+    public LayerMask playerLayerMask; 
+    public LayerMask commonLayers; 
+
+    [Header("Worlds")]
+    public List<Dimension> dimensions;
+
+    private int playerLayerIndex;
+    private int currentDimensionIndex = 0;
+
+    void Awake()
+    {
+        InitializeDimensions();
+        ApplyDimension(0);
+    }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Or whatever button you prefer
+        if (Input.GetMouseButtonDown(0))
         {
-            SwitchToNextLayer();
+            SwitchToNextDimension();
         }
     }
-    private void SetCameraMask(LayerMask mask)
+
+    private void InitializeDimensions()
     {
-        mainCam.cullingMask = mask;
+        // 1. Convert Player Mask to Index
+        playerLayerIndex = GetLayerIndexFromMask(playerLayerMask);
+        
+        if (playerLayerIndex == -1) 
+            Debug.LogError("Please select exactly ONE layer for the Player Layer Mask.");
+
+        // 2. Setup Dimensions
+        foreach (var dim in dimensions)
+        {
+            dim.calculatedLayerIndex = GetLayerIndexFromMask(dim.uniqueLayerMask);
+            
+            if (dim.calculatedLayerIndex == -1) 
+                Debug.LogError($"Dimension '{dim.name}' has invalid mask! Select exactly ONE layer.");
+            
+            DisablePhysicsForLayer(dim.calculatedLayerIndex);
+        }
     }
 
-    private void EnablePhysicsForLayer(LayerMask layer)
+    private void EnablePhysicsForLayer(int layerIndex)
     {
-        Physics2D.IgnoreLayerCollision(playerLayer, layer, false);
+        if(layerIndex >= 0)
+            Physics2D.IgnoreLayerCollision(playerLayerIndex, layerIndex, false);
     }
 
-    private void DisablePhysicsForLayer(LayerMask layer)
+    private void DisablePhysicsForLayer(int layerIndex)
     {
-        Physics2D.IgnoreLayerCollision(playerLayer, layer, true);
+        if(layerIndex >= 0)
+            Physics2D.IgnoreLayerCollision(playerLayerIndex, layerIndex, true);
     }
 
-    private void SwitchToNextLayer()
+    private void SwitchToNextDimension()
     {
-        Debug.Log("Switching Layers");
-        Debug.Log("Current Layer Index: " + currentLayerIndex);
-        var nextLayerIndex = (currentLayerIndex + 1) % cameraLayers.Length;
-         
-        SetCameraMask(cameraLayers[nextLayerIndex]);
-        DisablePhysicsForLayer(physicsLayers[currentLayerIndex]);
-        EnablePhysicsForLayer(physicsLayers[nextLayerIndex]);
-        currentLayerIndex = nextLayerIndex;
+        var nextDimensionIndex = (currentDimensionIndex + 1) % dimensions.Count;
+        
+        RemoveDimension(currentDimensionIndex);
+        ApplyDimension(nextDimensionIndex);
+        
+        currentDimensionIndex = nextDimensionIndex;
+    }
+    
+    private void RemoveDimension(int index)
+    {
+        var dim = dimensions[index];
+        DisablePhysicsForLayer(dim.calculatedLayerIndex);
+    }
+
+    private void ApplyDimension(int index)
+    {
+        var dim = dimensions[index];
+        Debug.Log($"Switching to {dim.name}");
+
+        mainCam.cullingMask = commonLayers | dim.uniqueLayerMask | playerLayerMask;
+
+        EnablePhysicsForLayer(dim.calculatedLayerIndex);
+    }
+
+    private int GetLayerIndexFromMask(LayerMask mask)
+    {
+        int value = mask.value;
+        if (value == 0) return -1;
+        
+        for (int i = 0; i < 32; i++)
+        {
+            if ((value & (1 << i)) != 0)
+            {
+                return i; 
+            }
+        }
+        return -1;
     }
 }
