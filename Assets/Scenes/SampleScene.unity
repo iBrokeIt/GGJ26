@@ -154,7 +154,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -179,7 +179,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 10
+  jumpForce: 4
+  jumpAssist: 6
+  jumpDuration: 0.35
   moveAction: {fileID: 99806590}
   jumpAction: {fileID: 1799820732}
 --- !u!212 &47590107
