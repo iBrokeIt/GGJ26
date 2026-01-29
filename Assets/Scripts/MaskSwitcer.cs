@@ -27,6 +27,7 @@ public class DimensionSwitcher : MonoBehaviour
     [Header("Worlds")]
     public List<Dimension> dimensions;
 
+    private bool devMode = false;
     private int playerLayerIndex;
     private int currentDimensionIndex = 0;
 
@@ -41,6 +42,11 @@ public class DimensionSwitcher : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             SwitchToNextDimension();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            DevModeToggleAllLayersOn();
         }
     }
 
@@ -115,5 +121,28 @@ public class DimensionSwitcher : MonoBehaviour
             }
         }
         return -1;
+    }
+
+    private void DevModeToggleAllLayersOn()
+    {
+        devMode = !devMode;
+        if (devMode)
+        {
+            for (int i = 0; i < dimensions.Count; i++)
+            {
+                ApplyDimension(i);
+            }
+            mainCam.cullingMask = ~0;
+
+        }
+        else
+        {
+            for(int i = 0; i < dimensions.Count; i++)
+            {
+                RemoveDimension(i);
+            }
+            ApplyDimension(currentDimensionIndex);
+        }
+       
     }
 }
