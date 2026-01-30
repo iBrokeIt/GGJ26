@@ -64,7 +64,7 @@ public class PlayerContoller : MonoBehaviour
     void GroundMovement()
     {
         // If no InputAction assigned, fall back to keyboard/gamepad probing
-        float baseVelocityX = GetHorizontalSpeed();
+        float baseVelocityX = GetHorizontalDirection() * moveSpeed;
         if (platformRb != null) {
             baseVelocityX += platformRb.linearVelocityX;
         }
@@ -94,10 +94,10 @@ public class PlayerContoller : MonoBehaviour
         return jumpInput > 0.1f;
     }
 
-    public float GetHorizontalSpeed()
+    public float GetHorizontalDirection()
     {
         Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
-        return moveInput.x * moveSpeed;
+        return moveInput.x;
     }
 
 }

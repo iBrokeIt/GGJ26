@@ -1,3 +1,5 @@
+using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class RopeSegmentScript : MonoBehaviour
@@ -7,6 +9,7 @@ public class RopeSegmentScript : MonoBehaviour
     GameObject player;
     bool wasJumpPressedLastFrame;
     float gravityReference;
+    public float momentumX;
 
     
     void Start()
@@ -39,8 +42,20 @@ public class RopeSegmentScript : MonoBehaviour
         if (player != null) {
             PlayerContoller playerContoller = player.GetComponent<PlayerContoller>();
             Rigidbody2D playerRb = player.GetComponent<Rigidbody2D>();
-            float horizontalSpeed = playerContoller.GetHorizontalSpeed();
-            rb.AddForce(new Vector2(horizontalSpeed, 0), ForceMode2D.Impulse);
+            float horizontalSpeed = playerContoller.GetHorizontalDirection();
+            // bool isRopeFalling = rb.linearVelocityY < -1e-4f;
+            // bool isRopeMovingInOppositeDirection = Math.Sign(rb.linearVelocityX) != Math.Sign(horizontalSpeed);
+            // bool isRopeXStationary = Math.Abs(rb.linearVelocityX) < 1e-4f;
+            
+            // if (!isRopeFalling && (isRopeMovingInOppositeDirection || isRopeXStationary)) {
+            //     Vector2 ropeNorm = rb.linearVelocity.normalized;
+            //     if (rb.linearVelocity.sqrMagnitude < 1e-4f) {
+            //         ropeNorm = new Vector2(-horizontalSpeed, 0);
+            //     }
+            Vector2 force = new Vector2(horizontalSpeed, 0);
+            Debug.Log("Applying rope force: " + force);
+            rb.AddForce(force, ForceMode2D.Impulse);
+            // }
             playerRb.MovePosition(rb.position);
         }
     }
