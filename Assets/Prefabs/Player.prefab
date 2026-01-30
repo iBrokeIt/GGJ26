@@ -103,12 +103,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c1450a2aeb6e4a0fb4d816cc98cc541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stepSound: {fileID: 8300000, guid: b732bcd0b46f5480a8f52e93e5f2fdec, type: 3}
   moveSpeed: 5
   jumpForce: 4
   jumpAssist: 6
   jumpDuration: 0.35
+  stepCooldown: 0.35
   moveAction: {fileID: 0}
   jumpAction: {fileID: 0}
+  interactAction: {fileID: 0}
+  allowUp: 0
 --- !u!50 &5957763165884883474
 Rigidbody2D:
   serializedVersion: 5
