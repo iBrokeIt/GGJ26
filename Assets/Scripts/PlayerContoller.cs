@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +12,7 @@ public class PlayerContoller : MonoBehaviour
 
     public InputActionReference moveAction;
     public InputActionReference jumpAction;
+    public InputActionReference interactAction;
     private bool isGrounded;
     private bool isJumping;
     private float jumpTimeCounter;
@@ -18,6 +20,8 @@ public class PlayerContoller : MonoBehaviour
     Rigidbody2D rb;
 
     Rigidbody2D platformRb;
+    [System.NonSerialized]
+    public bool isGrabbingRope;
 
     void Start()
     {
@@ -25,6 +29,7 @@ public class PlayerContoller : MonoBehaviour
         isGrounded = false;
         isJumping = false;
         platformRb = null;
+        isGrabbingRope = false;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -52,24 +57,47 @@ public class PlayerContoller : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!isGrabbingRope) {
+            GroundMovement();
+        }
+    }
+    void GroundMovement()
+    {
         // If no InputAction assigned, fall back to keyboard/gamepad probing
-        Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
-        float baseVelocityX = moveInput.x * moveSpeed;
+        float baseVelocityX = GetHorizontalSpeed();
         if (platformRb != null) {
             baseVelocityX += platformRb.linearVelocityX;
         }
         rb.linearVelocityX = baseVelocityX;
-        float jumpInput = jumpAction.action.ReadValue<float>();
-        if (jumpInput > 0.1f && isGrounded && !isJumping)
+        bool isJumpPressed = IsJumpPressed();
+        if (isJumpPressed && isGrounded && !isJumping)
         {
             isJumping = true;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
-        if (jumpTimeCounter > 0 && jumpInput > 0.1f)
+        if (jumpTimeCounter > 0 && isJumpPressed)
         {
             rb.AddForce(Vector2.up * jumpAssist * Time.deltaTime, ForceMode2D.Impulse);
             jumpTimeCounter -= Time.deltaTime;
         }
+    }
+
+    public bool IsInteracting()
+    {
+        float interactInput = interactAction.action.ReadValue<float>();
+        return interactInput > 0.1f;
+    }
+
+    public bool IsJumpPressed()
+    {
+        float jumpInput = jumpAction.action.ReadValue<float>();
+        return jumpInput > 0.1f;
+    }
+
+    public float GetHorizontalSpeed()
+    {
+        Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
+        return moveInput.x * moveSpeed;
     }
 
 }
