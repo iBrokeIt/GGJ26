@@ -148,6 +148,7 @@ public class DimensionSwitcher : MonoBehaviour
         var dim = dimensions[index];
         Debug.Log($"Switching to {dim.name}");
 
+        AudioManager.Instance.SetActiveMusicLayer(index);
         mainCam.cullingMask = commonLayers | dim.uniqueLayerMask | playerLayerMask;
         mainCam.backgroundColor = WORLD_COLORS[index];
         EnablePhysicsForLayer(dim.calculatedLayerIndex);
