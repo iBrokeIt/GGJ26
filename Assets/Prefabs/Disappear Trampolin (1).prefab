@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3929517715759309146}
   - component: {fileID: 2824932579080674538}
   - component: {fileID: 6911114594313348685}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Disappear Trampolin (1)
   m_TagString: Floor
   m_Icon: {fileID: 0}
