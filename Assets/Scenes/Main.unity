@@ -707,6 +707,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1732777340437857632, guid: e7a4d1eabf7d5fb4d83f77c2cf92d5c7, type: 3}
   m_PrefabInstance: {fileID: 500606640}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &518996498 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6202048264419796871, guid: 2974184e232b846e3862a7a159375077, type: 3}
+  m_PrefabInstance: {fileID: 6391512114796709509}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,7 +1467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8982608046603912870, guid: edacc4e6a458a475bbe6fca44f076230, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 14.669884
+      value: 13.749884
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2253,7 +2258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8982608046603912870, guid: edacc4e6a458a475bbe6fca44f076230, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 14.669884
+      value: 13.749884
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2810,7 +2815,7 @@ PrefabInstance:
     - target: {fileID: -8916512818347895103, guid: 8c30a67bbc44b4d58a2aa47c5777ae58, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 451064282}
+      objectReference: {fileID: 518996498}
     - target: {fileID: -8916512818347895103, guid: 8c30a67bbc44b4d58a2aa47c5777ae58, type: 3}
       propertyPath: resetAction
       value: 
@@ -3376,3 +3381,4 @@ SceneRoots:
   - {fileID: 211321376}
   - {fileID: 746724277}
   - {fileID: 1252395679}
+  - {fileID: 773699978}
