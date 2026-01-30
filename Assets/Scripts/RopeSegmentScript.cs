@@ -31,13 +31,17 @@ public class RopeSegmentScript : MonoBehaviour
                 player.GetComponent<PlayerContoller>().isGrabbingRope = false;
                 player = null;
             }
-            if (player != null) {
-                Rigidbody2D playerRb = player.GetComponent<Rigidbody2D>();
-                float horizontalSpeed = playerContoller.GetHorizontalSpeed();
-                rb.AddForce(new Vector2(horizontalSpeed, 0), ForceMode2D.Impulse);
-                playerRb.MovePosition(rb.position);
-            }
+        }
+    }
 
+    void FixedUpdate()
+    {
+        if (player != null) {
+            PlayerContoller playerContoller = player.GetComponent<PlayerContoller>();
+            Rigidbody2D playerRb = player.GetComponent<Rigidbody2D>();
+            float horizontalSpeed = playerContoller.GetHorizontalSpeed();
+            rb.AddForce(new Vector2(horizontalSpeed, 0), ForceMode2D.Impulse);
+            playerRb.MovePosition(rb.position);
         }
     }
 
