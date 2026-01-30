@@ -73,7 +73,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4da9a1300179a428384084b81840c9a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxSource: {fileID: 0}
   musicVolume: 0.7
   sfxVolume: 1
   layerFadeDuration: 1
@@ -91,6 +90,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainLoop: {fileID: 8300000, guid: 82f8203def1d3485a9be28e144a6f0cf, type: 3}
   layersLoop:
-  - {fileID: 0}
-  - {fileID: 8300000, guid: a45155e3f97894505b3ce7b5ddccfb85, type: 3}
-  - {fileID: 8300000, guid: 1214c5708b83f46d597a31d9dbf9d8b0, type: 3}
+  - {fileID: 8300000, guid: cf300ada1ea504f708ecf3019d996649, type: 3}
+  - {fileID: 8300000, guid: 2c614e29c529d4d52bfe0a301e41f25a, type: 3}
+  - {fileID: 8300000, guid: 0ce25d18222724f1cb91558c30b6f770, type: 3}
