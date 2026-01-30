@@ -8,7 +8,7 @@ public class DimensionSwitcher : MonoBehaviour
     Color.cyan,
     Color.magenta,
     Color.yellow
-};
+    };
 
     [System.Serializable]
     public class Dimension
@@ -32,6 +32,8 @@ public class DimensionSwitcher : MonoBehaviour
 
     [Header("Worlds")]
     public List<Dimension> dimensions;
+    [Header("SFX")]
+    public List<AudioClip> dimensionSwitchSFX;
 
     private bool devMode = false;
     private int playerLayerIndex;
@@ -131,9 +133,10 @@ public class DimensionSwitcher : MonoBehaviour
     public void SwitchToDimension(int nextDimensionIndex)
     {        
         if (nextDimensionIndex == currentDimensionIndex) return;
+        PlayRandomDimensionSwitchSFX();
         RemoveDimension(currentDimensionIndex);
         ApplyDimension(nextDimensionIndex);
-        
+
         currentDimensionIndex = nextDimensionIndex;
     }
     
@@ -167,6 +170,14 @@ public class DimensionSwitcher : MonoBehaviour
             }
         }
         return -1;
+    }
+
+    private void PlayRandomDimensionSwitchSFX()
+    {
+        if (dimensionSwitchSFX.Count == 0) return;
+
+        int randomIndex = Random.Range(0, dimensionSwitchSFX.Count);
+        AudioManager.Instance.PlaySFX(dimensionSwitchSFX[randomIndex]);
     }
 
     private void DevModeToggleAllLayersOn()

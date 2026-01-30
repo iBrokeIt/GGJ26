@@ -224,3 +224,11 @@ MonoBehaviour:
       m_Bits: 256
     switchAction: {fileID: 0}
     calculatedLayerIndex: 0
+  dimensionSwitchSFX:
+  - {fileID: 8300000, guid: 4c3884ed244c64af28b172ffab8e7612, type: 3}
+  - {fileID: 8300000, guid: 3aba1c0bdb51e4aedbf1f1e7c3ca9fc7, type: 3}
+  - {fileID: 8300000, guid: daa51fc93d4e34518878c220865d263c, type: 3}
+  - {fileID: 8300000, guid: 545d524f5a76c49cdbdce7a52b03c05b, type: 3}
+  - {fileID: 8300000, guid: 0efd068b7bb92440f9540e793e185676, type: 3}
+  - {fileID: 8300000, guid: 5a219ace539fb4bd1aef612e70869f76, type: 3}
+  - {fileID: 8300000, guid: 67f34ef69ae524d858a96a770b50085c, type: 3}
