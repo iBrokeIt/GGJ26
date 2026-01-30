@@ -22,6 +22,9 @@ public class DimensionSwitcher : MonoBehaviour
         [HideInInspector] public int calculatedLayerIndex;
     }
 
+    [Header("Singleton")]
+    public static DimensionSwitcher Instance { get; private set; }
+
     [Header("Configuration")]
     public Camera mainCam;
     public LayerMask playerLayerMask; 
@@ -36,6 +39,17 @@ public class DimensionSwitcher : MonoBehaviour
 
     void Awake()
     {
+        // Singleton Setup
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); 
+        }
+        else
+        {
+            Destroy(gameObject); 
+            return;
+        }
         InitializeDimensions();
         ApplyDimension(0);
     }
@@ -114,7 +128,7 @@ public class DimensionSwitcher : MonoBehaviour
             Physics2D.IgnoreLayerCollision(playerLayerIndex, layerIndex, true);
     }
 
-    private void SwitchToDimension(int nextDimensionIndex)
+    public void SwitchToDimension(int nextDimensionIndex)
     {        
         if (nextDimensionIndex == currentDimensionIndex) return;
         RemoveDimension(currentDimensionIndex);
