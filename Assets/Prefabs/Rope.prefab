@@ -187,6 +187,14 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 8263193096991213535}
+    - target: {fileID: 4567769075928155817, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Size.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567769075928155817, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Size.y
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
