@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToDisappear: 2
   timeToAppear: 5
+  disappearSound: {fileID: 8300000, guid: 91a157918aaf645818d0d008ecc73a52, type: 3}
 --- !u!212 &2824932579080674538
 SpriteRenderer:
   m_ObjectHideFlags: 0
