@@ -87,7 +87,6 @@ public class AudioManager : MonoBehaviour
 
     public void SetActiveMusicLayer(int layerIndex)
     {
-        layerIndex -= 1; // layer 0 is the base layer and should always play
         for (int i = 0; i < layerSources.Count; i++)
         {
             if (layerSources[i].clip == null) continue;
