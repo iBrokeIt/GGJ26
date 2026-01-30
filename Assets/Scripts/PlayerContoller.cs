@@ -16,6 +16,7 @@ public class PlayerContoller : MonoBehaviour
     private bool isGrounded;
     private bool isJumping;
     private float jumpTimeCounter;
+    public bool allowUp;
 
     Rigidbody2D rb;
 
@@ -60,6 +61,10 @@ public class PlayerContoller : MonoBehaviour
         if (!isGrabbingRope) {
             GroundMovement();
         }
+        if (allowUp && IsGoUp())
+        {
+            rb.linearVelocityY = jumpForce;
+        }
     }
     void GroundMovement()
     {
@@ -98,6 +103,12 @@ public class PlayerContoller : MonoBehaviour
     {
         Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
         return moveInput.x;
+    }
+
+    public bool IsGoUp()
+    {
+        Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
+        return moveInput.y > 0.1f;
     }
 
 }
