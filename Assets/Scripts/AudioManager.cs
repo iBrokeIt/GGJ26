@@ -5,10 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-
-    [Header("Audio Sources")]
-    public AudioSource sfxSource;
-    
+    private AudioSource sfxSource;
     private AudioSource baseMusicSource;
     private List<AudioSource> layerSources = new List<AudioSource>();
 
@@ -28,6 +25,8 @@ public class AudioManager : MonoBehaviour
             baseMusicSource = gameObject.AddComponent<AudioSource>();
             baseMusicSource.loop = true;
             baseMusicSource.playOnAwake = false;
+            sfxSource = gameObject.AddComponent<AudioSource>();
+            sfxSource.playOnAwake = false;
         }
         else
         {
@@ -38,14 +37,8 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         baseMusicSource.volume = musicVolume;
-        if(sfxSource != null)
-        {
-            sfxSource.volume = sfxVolume;
-        }
-        else
-        {
-            Debug.LogWarning("SFX AudioSource is not assigned in AudioManager.");
-        }
+        sfxSource.volume = sfxVolume;
+        
     }
 
     public void PlaySFX(AudioClip clip)

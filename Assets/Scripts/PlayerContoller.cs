@@ -1,21 +1,23 @@
+using System;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerContoller : MonoBehaviour
 {
+    public AudioClip stepSound; // TODO: remove
     public float moveSpeed = 5f;
     public float jumpForce;
     public float jumpAssist;
-
     public float jumpDuration = 0.35f;
-
+    public float stepCooldown = 0.35f;
     public InputActionReference moveAction;
     public InputActionReference jumpAction;
     public InputActionReference interactAction;
     private bool isGrounded;
     private bool isJumping;
     private float jumpTimeCounter;
+    private float lastStepTime;
     public bool allowUp;
 
     Rigidbody2D rb;
@@ -70,6 +72,11 @@ public class PlayerContoller : MonoBehaviour
     {
         // If no InputAction assigned, fall back to keyboard/gamepad probing
         float baseVelocityX = GetHorizontalDirection() * moveSpeed;
+        if(Mathf.Abs(baseVelocityX) > 0.1f && isGrounded)
+        {
+            PlayWalkingSound();
+        }
+
         if (platformRb != null) {
             baseVelocityX += platformRb.linearVelocityX;
         }
@@ -109,6 +116,16 @@ public class PlayerContoller : MonoBehaviour
     {
         Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
         return moveInput.y > 0.1f;
+    }
+
+    private void PlayWalkingSound()
+    {
+        if (Time.time - lastStepTime > stepCooldown)
+        {
+            Debug.Log("Play step sound");
+            AudioManager.Instance.PlayRandomizedSFX(stepSound);
+            lastStepTime = Time.time;
+        }
     }
 
 }

@@ -3,9 +3,12 @@ using UnityEngine;
 
 public class Disappear : MonoBehaviour
 {
+    [Header("Settings")]
     public float timeToDisappear = 2.0f;
     public float timeToAppear = 5.0f;
 
+    [Header("SFX")]
+    public AudioClip disappearSound;
 
     private bool startDisappeared = false;
 
@@ -18,17 +21,13 @@ public class Disappear : MonoBehaviour
         collider = GetComponent<Collider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
  private System.Collections.IEnumerator DisappearAndAppear()
     {
         // Wait for the specified time
         yield return new WaitForSeconds(timeToDisappear);
 
         // Make the object disappear
+        AudioManager.Instance.PlayRandomizedSFX(disappearSound);
         spriteRenderer.enabled = false;
         collider.enabled = false;
 
