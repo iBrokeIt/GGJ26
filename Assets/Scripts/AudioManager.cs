@@ -38,7 +38,14 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         baseMusicSource.volume = musicVolume;
-        sfxSource.volume = sfxVolume;
+        if(sfxSource != null)
+        {
+            sfxSource.volume = sfxVolume;
+        }
+        else
+        {
+            Debug.LogWarning("SFX AudioSource is not assigned in AudioManager.");
+        }
     }
 
     public void PlaySFX(AudioClip clip)

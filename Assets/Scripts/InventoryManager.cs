@@ -38,8 +38,8 @@ public class InventoryManager : MonoBehaviour
             inventory.Add(itemName, amount);
             newAmount = amount;
         }
-        OnInventoryChanged.Invoke(itemName, newAmount);
         Debug.Log($"Collected: {itemName}. Total: {inventory[itemName]}");
+        OnInventoryChanged?.Invoke(itemName, newAmount);
     }
 
     public int GetItemCount(string itemName)

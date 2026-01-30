@@ -8,7 +8,7 @@ public class ItemCounterUI : MonoBehaviour
     public string itemID = "MAIN_COLLECTIBLE"; 
     public TextMeshProUGUI textComp;
 
-    void Awake()
+    void Start()
     {
         UpdateText(itemID, InventoryManager.Instance.GetItemCount(itemID));
     }

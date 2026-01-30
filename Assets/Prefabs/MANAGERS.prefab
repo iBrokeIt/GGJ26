@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3090654707609023254}
   - component: {fileID: 6180318960878614158}
   - component: {fileID: -8916512818347895103}
+  - component: {fileID: 7973366821161568342}
+  - component: {fileID: 686028712932883090}
   m_Layer: 0
   m_Name: MANAGERS
   m_TagString: Untagged
@@ -59,3 +61,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resetAction: {fileID: 0}
   player: {fileID: 0}
+--- !u!114 &7973366821161568342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4482199120219255313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da9a1300179a428384084b81840c9a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxSource: {fileID: 0}
+  musicVolume: 0.7
+  sfxVolume: 1
+  layerFadeDuration: 1
+--- !u!114 &686028712932883090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4482199120219255313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c0c95f87cbf44e5b17ff18830c79bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainLoop: {fileID: 8300000, guid: 82f8203def1d3485a9be28e144a6f0cf, type: 3}
+  layersLoop:
+  - {fileID: 0}
+  - {fileID: 8300000, guid: a45155e3f97894505b3ce7b5ddccfb85, type: 3}
+  - {fileID: 8300000, guid: 1214c5708b83f46d597a31d9dbf9d8b0, type: 3}
