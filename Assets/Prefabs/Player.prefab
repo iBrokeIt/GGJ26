@@ -106,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stepSound: {fileID: 8300000, guid: b732bcd0b46f5480a8f52e93e5f2fdec, type: 3}
   moveSpeed: 5
-  jumpForce: 4
+  jumpForce: 10
   jumpAssist: 6
   jumpDuration: 0.35
   stepCooldown: 0.35
@@ -129,7 +129,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
