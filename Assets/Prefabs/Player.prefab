@@ -206,14 +206,17 @@ MonoBehaviour:
     uniqueLayerMask:
       serializedVersion: 2
       m_Bits: 64
+    switchAction: {fileID: 0}
     calculatedLayerIndex: 0
   - name: Heaven
     uniqueLayerMask:
       serializedVersion: 2
       m_Bits: 128
+    switchAction: {fileID: 0}
     calculatedLayerIndex: 0
   - name: Hell
     uniqueLayerMask:
       serializedVersion: 2
       m_Bits: 256
+    switchAction: {fileID: 0}
     calculatedLayerIndex: 0

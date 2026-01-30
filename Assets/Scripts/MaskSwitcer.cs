@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DimensionSwitcher : MonoBehaviour
 {
@@ -14,8 +15,10 @@ public class DimensionSwitcher : MonoBehaviour
     {
         public string name;
         [Tooltip("Select ONLY the specific layer for this world (e.g., World_A)")]
-        public LayerMask uniqueLayerMask; 
+        public LayerMask uniqueLayerMask;
+        public InputActionReference switchAction; 
         
+        [HideInInspector] public System.Action<InputAction.CallbackContext> inputHandler;
         [HideInInspector] public int calculatedLayerIndex;
     }
 
@@ -39,17 +42,46 @@ public class DimensionSwitcher : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            SwitchToNextDimension();
-        }
-
         if (Input.GetKeyDown(KeyCode.Z))
         {
             DevModeToggleAllLayersOn();
         }
     }
 
+    void OnEnable()
+    {
+        for(int i = 0; i < dimensions.Count; i++)
+        {
+            var dim = dimensions[i];
+            var scopedIndex = i;
+            if (dim.switchAction != null)
+            {
+                dim.switchAction.action.Enable();
+                dim.inputHandler = ctx => SwitchToDimension(scopedIndex);
+                dim.switchAction.action.performed += dim.inputHandler;
+                Debug.Log($"Subscribed to switch action for dimension: {dim.name} with Key {dim.switchAction.action.bindings[0].effectivePath}");
+            }
+            else
+            {
+                Debug.LogError($"No switch action assigned for dimension: {dim.name}");
+            }
+        }
+    }
+
+    void OnDisable()
+{
+    foreach (var dim in dimensions)
+    {
+        if (dim.switchAction != null && dim.inputHandler != null)
+        {
+            // 3. Unsubscribe using the EXACT same handler we saved
+            dim.switchAction.action.performed -= dim.inputHandler;
+            dim.inputHandler = null; // Clean up
+
+            dim.switchAction.action.Disable();
+        }
+    }
+}
     private void InitializeDimensions()
     {
         // 1. Convert Player Mask to Index
@@ -82,10 +114,9 @@ public class DimensionSwitcher : MonoBehaviour
             Physics2D.IgnoreLayerCollision(playerLayerIndex, layerIndex, true);
     }
 
-    private void SwitchToNextDimension()
-    {
-        var nextDimensionIndex = (currentDimensionIndex + 1) % dimensions.Count;
-        
+    private void SwitchToDimension(int nextDimensionIndex)
+    {        
+        if (nextDimensionIndex == currentDimensionIndex) return;
         RemoveDimension(currentDimensionIndex);
         ApplyDimension(nextDimensionIndex);
         

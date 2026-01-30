@@ -865,6 +865,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7081715507990016324, guid: ebfee84536b674f35807d6c1c29f359a, type: 3}
   m_PrefabInstance: {fileID: 2372176154001532569}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &678847886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/WorldA
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_ActionId: 086dd049-9103-4116-88dc-22d7f60a424f
+--- !u!114 &756201611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/WorldC
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_ActionId: 04287b28-40c7-4a5a-b279-8060d9953e8e
 --- !u!1001 &758782483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1549,6 +1577,20 @@ Transform:
   - {fileID: 937200852}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1634454070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/WorldB
+  m_EditorClassIdentifier: 
+  m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_ActionId: 993a99bb-43f5-4aed-a4a5-072d50f0271d
 --- !u!1001 &1673107775
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2030,6 +2072,18 @@ PrefabInstance:
       propertyPath: mainCam
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: -4876126654812110163, guid: 2974184e232b846e3862a7a159375077, type: 3}
+      propertyPath: dimensions.Array.data[0].switchAction
+      value: 
+      objectReference: {fileID: 678847886}
+    - target: {fileID: -4876126654812110163, guid: 2974184e232b846e3862a7a159375077, type: 3}
+      propertyPath: dimensions.Array.data[1].switchAction
+      value: 
+      objectReference: {fileID: 1634454070}
+    - target: {fileID: -4876126654812110163, guid: 2974184e232b846e3862a7a159375077, type: 3}
+      propertyPath: dimensions.Array.data[2].switchAction
+      value: 
+      objectReference: {fileID: 756201611}
     - target: {fileID: 2400671475094436669, guid: 2974184e232b846e3862a7a159375077, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15
