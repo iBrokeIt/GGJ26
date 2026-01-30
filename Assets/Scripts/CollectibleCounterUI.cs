@@ -11,12 +11,10 @@ public class ItemCounterUI : MonoBehaviour
     void Start()
     {
         UpdateText(itemID, InventoryManager.Instance.GetItemCount(itemID));
-    }
-
-    void OnEnable()
-    {
-        if (InventoryManager.Instance != null)
+        if (InventoryManager.Instance != null){
             InventoryManager.Instance.OnInventoryChanged += UpdateText;
+            Debug.Log("Subscribed to inventory changes");
+        }
     }
 
     void OnDisable()
@@ -30,4 +28,5 @@ public class ItemCounterUI : MonoBehaviour
         if (changedItemID != itemID) return;
         textComp.text = newAmount.ToString();
     }
+
 }

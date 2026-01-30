@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 634965675073303667}
   - component: {fileID: 537066230898841439}
   - component: {fileID: 5964133279086947142}
+  - component: {fileID: 2189245725860302563}
   m_Layer: 7
   m_Name: Trampolin
   m_TagString: Floor
@@ -216,3 +217,16 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &2189245725860302563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045544170798556594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40239de24b5c74a9882c0da81da61f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceForce: 4

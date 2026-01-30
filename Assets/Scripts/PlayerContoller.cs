@@ -48,8 +48,8 @@ public class PlayerContoller : MonoBehaviour
             isGrounded = true;
             isJumping = false;
             platformRb = collision.gameObject.GetComponent<Rigidbody2D>();
-            Debug.Log("Landed on floor");
             animator.SetTrigger("hitFloor");
+            animator.ResetTrigger("jumping");
         }
     }
 
@@ -74,12 +74,17 @@ public class PlayerContoller : MonoBehaviour
         if (!isGrabbingRope) {
             GroundMovement();
             if (isGrounded) {
-                speed = Mathf.Abs(rb.linearVelocityX);
-                Debug.Log(rb.linearVelocityX);
+                speed = rb.linearVelocityX;
+                if (platformRb != null) {
+                    speed = speed - platformRb.linearVelocityX;
+                }
+                speed = Mathf.Abs(speed);
             }
         }
+        // Moving average for smoother animation transitions, prevent idle break when flipping
         meanSpeed = meanSpeed * 0.67f + speed * 0.33f;
         animator.SetFloat("speed", meanSpeed);
+        // Flip sprite based on movement direction, but only if there is some movement
         if (rb.linearVelocityX != 0) {
             spriteRenderer.flipX = rb.linearVelocityX < 0;
         }
@@ -148,7 +153,6 @@ public class PlayerContoller : MonoBehaviour
     {
         if (Time.time - lastStepTime > stepCooldown)
         {
-            Debug.Log("Play step sound");
             AudioManager.Instance.PlayRandomizedSFX(stepSound);
             lastStepTime = Time.time;
         }
