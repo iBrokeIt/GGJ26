@@ -52,8 +52,13 @@ public class DimensionSwitcher : MonoBehaviour
             Destroy(gameObject); 
             return;
         }
+    }
+
+    void Start()
+    {
         InitializeDimensions();
-        ApplyDimension(0);
+        ApplyDimension(currentDimensionIndex);
+        AudioManager.Instance.SetActiveMusicLayer(currentDimensionIndex);
     }
 
     void Update()
