@@ -12,8 +12,6 @@ public class InventoryManager : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("Wakey wakey, inventory manager here!");
-        // Singleton Setup
         if (Instance == null)
         {
             Instance = this;
