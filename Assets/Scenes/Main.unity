@@ -550,11 +550,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7755172022675307168, guid: edacc4e6a458a475bbe6fca44f076230, type: 3}
   m_PrefabInstance: {fileID: 625868572}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &451064282 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6202048264419796871, guid: 2974184e232b846e3862a7a159375077, type: 3}
-  m_PrefabInstance: {fileID: 6391512114796709509}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &497089722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,6 +1335,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9064362104237126718, guid: 849bcb6e60d96e84eaeb810138a83b9a, type: 3}
   m_PrefabInstance: {fileID: 758782483}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &773699976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773699978}
+  - component: {fileID: 773699977}
+  m_Layer: 0
+  m_Name: BackgroundMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &773699977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773699976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c0c95f87cbf44e5b17ff18830c79bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainLoop: {fileID: 8300000, guid: 82f8203def1d3485a9be28e144a6f0cf, type: 3}
+  layersLoop:
+  - {fileID: 0}
+  - {fileID: 8300000, guid: a45155e3f97894505b3ce7b5ddccfb85, type: 3}
+  - {fileID: 8300000, guid: 1214c5708b83f46d597a31d9dbf9d8b0, type: 3}
+--- !u!4 &773699978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773699976}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 398.5, y: 224, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &813554100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1378,7 +1422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7755172022675307168, guid: edacc4e6a458a475bbe6fca44f076230, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.64
+      value: 12.72
       objectReference: {fileID: 0}
     - target: {fileID: 7755172022675307168, guid: edacc4e6a458a475bbe6fca44f076230, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1414,11 +1458,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8982608046603912870, guid: edacc4e6a458a475bbe6fca44f076230, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 45.653618
+      value: 67.91363
       objectReference: {fileID: 0}
     - target: {fileID: 8982608046603912870, guid: edacc4e6a458a475bbe6fca44f076230, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 13.319883
+      value: 14.669884
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2169,7 +2213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7755172022675307168, guid: edacc4e6a458a475bbe6fca44f076230, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.64
+      value: 12.72
       objectReference: {fileID: 0}
     - target: {fileID: 7755172022675307168, guid: edacc4e6a458a475bbe6fca44f076230, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2205,11 +2249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8982608046603912870, guid: edacc4e6a458a475bbe6fca44f076230, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 39.78362
+      value: 62.043617
       objectReference: {fileID: 0}
     - target: {fileID: 8982608046603912870, guid: edacc4e6a458a475bbe6fca44f076230, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 13.319883
+      value: 14.669884
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

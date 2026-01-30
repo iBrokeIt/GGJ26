@@ -10,12 +10,12 @@ public class Disappear : MonoBehaviour
     private bool startDisappeared = false;
 
     private SpriteRenderer spriteRenderer;
-    private Collider2D collider;
+    private Collider2D myCollider;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        collider = GetComponent<Collider2D>();
+        myCollider = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
@@ -30,14 +30,14 @@ public class Disappear : MonoBehaviour
 
         // Make the object disappear
         spriteRenderer.enabled = false;
-        collider.enabled = false;
+        myCollider.enabled = false;
 
         // Wait for the specified time
         yield return new WaitForSeconds(timeToAppear);
 
         // Make the object appear again
         spriteRenderer.enabled = true;
-        collider.enabled = true;
+        myCollider.enabled = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

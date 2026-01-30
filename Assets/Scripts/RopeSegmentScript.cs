@@ -1,5 +1,3 @@
-using System;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class RopeSegmentScript : MonoBehaviour
@@ -10,12 +8,15 @@ public class RopeSegmentScript : MonoBehaviour
     bool wasJumpPressedLastFrame;
     float gravityReference;
     public float momentumX;
+    public float cooldownTime = 0.35f;
+    float cooldownTimer;
 
     
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         wasJumpPressedLastFrame = false;
+        cooldownTimer = 0;
     }
 
     // Update is called once per frame
@@ -33,7 +34,12 @@ public class RopeSegmentScript : MonoBehaviour
                 playerRb.linearVelocity = rb.linearVelocity;
                 player.GetComponent<PlayerContoller>().isGrabbingRope = false;
                 player = null;
+                cooldownTimer = cooldownTime;
             }
+        }
+        if (cooldownTimer > 0)
+        {
+            cooldownTimer -= Time.deltaTime;
         }
     }
 
@@ -53,18 +59,18 @@ public class RopeSegmentScript : MonoBehaviour
             //         ropeNorm = new Vector2(-horizontalSpeed, 0);
             //     }
             Vector2 force = new Vector2(horizontalDirection * momentumX, 0);
-            Debug.Log("Applying rope force: " + force);
             rb.AddForce(force, ForceMode2D.Impulse);
             // }
             playerRb.MovePosition(rb.position);
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Player") 
+    void OnTriggerStay2D(Collider2D other) {
+        if (player == null 
+        && cooldownTimer <= 0
+        && other.CompareTag("Player") 
         && other.GetComponent<PlayerContoller>().jumpAction.action.IsPressed()) {
             player = other.gameObject;
-            Debug.Log("Player grabbed rope");
             Rigidbody2D playerRb = player.GetComponent<Rigidbody2D>();
             gravityReference = playerRb.gravityScale;
             playerRb.gravityScale = 0;
