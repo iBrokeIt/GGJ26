@@ -48,6 +48,8 @@ public class PlayerContoller : MonoBehaviour
             isGrounded = true;
             isJumping = false;
             platformRb = collision.gameObject.GetComponent<Rigidbody2D>();
+            Debug.Log("Landed on floor");
+            animator.SetTrigger("hitFloor");
         }
     }
 
@@ -59,6 +61,8 @@ public class PlayerContoller : MonoBehaviour
             if (isJumping)
             {
                 jumpTimeCounter = jumpDuration;
+                animator.SetTrigger("jumping");
+                animator.ResetTrigger("hitFloor");
             }
             platformRb = null;
         }
@@ -80,6 +84,9 @@ public class PlayerContoller : MonoBehaviour
             spriteRenderer.flipX = rb.linearVelocityX < 0;
         }
         
+        animator.SetFloat("verticalSpeed", rb.linearVelocityY);
+
+
         if (allowUp && IsGoUp())
         {
             rb.linearVelocityY = jumpForce;
@@ -134,6 +141,8 @@ public class PlayerContoller : MonoBehaviour
         Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
         return moveInput.y > 0.1f;
     }
+
+  
 
     private void PlayWalkingSound()
     {

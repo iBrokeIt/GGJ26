@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a897f64e53b89894e8dd5d1032b21930
+guid: 8b56fc5ac02ab8340a752dcebc4013d4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2954470060178190815
-    second: RunCycle-03_0
+      213: -7351341538330099560
+    second: Jump01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RunCycle-03_0
+      name: Jump01_0
       rect:
         serializedVersion: 2
-        x: 236
-        y: 176
-        width: 1696
-        height: 1512
+        x: 533
+        y: 169
+        width: 1332
+        height: 1354
       alignment: 8
       pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12e4d8b322d9ff6d0800000000000000
-      internalID: -2954470060178190815
+      spriteID: 890c249e1d9caf990800000000000000
+      internalID: -7351341538330099560
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 788522f6be88f754f9f1162bb3847421
+    spriteID: 8686e519124b6eb44a1465923f2e341b
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      RunCycle-03_0: -2954470060178190815
+      Jump01_0: -7351341538330099560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
