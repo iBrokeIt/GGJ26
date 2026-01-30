@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   momentumX: 0.2
+  cooldownTime: 0.35
 --- !u!1001 &4111075180472598814
 PrefabInstance:
   m_ObjectHideFlags: 0
