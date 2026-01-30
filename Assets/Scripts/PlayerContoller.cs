@@ -55,6 +55,7 @@ public class PlayerContoller : MonoBehaviour
             if (isJumping)
             {
                 jumpTimeCounter = jumpDuration;
+                animator.SetTrigger("jumping");
             }
             platformRb = null;
         }
