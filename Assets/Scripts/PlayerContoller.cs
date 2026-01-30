@@ -25,10 +25,12 @@ public class PlayerContoller : MonoBehaviour
     Rigidbody2D platformRb;
     [System.NonSerialized]
     public bool isGrabbingRope;
+    Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         isGrounded = false;
         isJumping = false;
         platformRb = null;
@@ -60,9 +62,15 @@ public class PlayerContoller : MonoBehaviour
 
     void FixedUpdate()
     {
+        float speed = 0;
         if (!isGrabbingRope) {
             GroundMovement();
+            if (isGrounded) {
+                speed = Mathf.Abs(rb.linearVelocityX);
+            }
         }
+        animator.SetFloat("speed", speed);
+        
         if (allowUp && IsGoUp())
         {
             rb.linearVelocityY = jumpForce;
