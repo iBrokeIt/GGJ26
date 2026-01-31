@@ -9,7 +9,9 @@ public class AltarScript : MonoBehaviour
     public GameObject player;
     private bool playerInRange = false;
     List<GameObject> altarCollectibles = new List<GameObject>();
+    public GameObject visualHint;
     public List<AudioClip> collectibleSounds;
+    public AudioClip errorSound;
     public AudioClip finishSound;
     public float interactionCooldown = 1f;
     float lastInteractionTime = 0f;
@@ -27,6 +29,7 @@ public class AltarScript : MonoBehaviour
         {
             Debug.LogWarning("Mismatch between number of collectible sounds and altar collectibles.");
         }
+        visualHint.SetActive(false);
     }
 
     void OnDisable()
@@ -42,6 +45,7 @@ public class AltarScript : MonoBehaviour
         {
             Debug.Log("Player entered altar area");
             playerInRange = true;
+            visualHint.SetActive(true);
         }
     }
 
@@ -63,6 +67,9 @@ public class AltarScript : MonoBehaviour
         }
         else {
             Debug.Log("No collectibles to place on the altar.");
+            if (errorSound != null) {
+                AudioManager.Instance.PlaySFX(errorSound);
+            }
             return;
         }
         if (collectibleCount >= 3)
@@ -86,7 +93,7 @@ public class AltarScript : MonoBehaviour
         {
             Debug.Log("Player exited altar area");
             playerInRange = false;
-            
+            visualHint.SetActive(false);
         }
     }
 }

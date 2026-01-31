@@ -139,3 +139,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: MAIN_COLLECTIBLE
+  collectSound: {fileID: 8300000, guid: e955fe4bed5304b11bce34ecc8bb6516, type: 3}
