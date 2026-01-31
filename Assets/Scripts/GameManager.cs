@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     private GameObject CurrentPlayer;
     private Vector2 lastCheckpointPos;
+    private AudioSource buttonSoundEffect;
     void Awake()
     {
         // Singleton Setup
@@ -26,6 +27,9 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject); 
         }
+
+        buttonSoundEffect = GetComponent<AudioSource>();
+        
     }
 
     public void RegisterPlayer(GameObject player)
@@ -62,15 +66,27 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Main");
+        PlayClickSound();
     }
 
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("Menu");
+        PlayClickSound();
     }
 
     public void GoToHotKeys()
     {
         SceneManager.LoadScene("HotKeys");
+        PlayClickSound();
+
+    }
+
+    public void PlayClickSound()
+    {
+        if (buttonSoundEffect != null)
+        {
+            buttonSoundEffect.Play();
+        }
     }
 }
