@@ -9004,10 +9004,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3491743000808972194, guid: 2974184e232b846e3862a7a159375077, type: 3}
-      propertyPath: allowUp
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3491743000808972194, guid: 2974184e232b846e3862a7a159375077, type: 3}
       propertyPath: jumpAction
       value: 
       objectReference: {fileID: 1799820732}
