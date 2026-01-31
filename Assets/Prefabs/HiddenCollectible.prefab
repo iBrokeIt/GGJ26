@@ -137,8 +137,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 7334013424128145767}
   sprites:
   - {fileID: -1496035223740966883, guid: 5447e8fa5ffd3412c9b5fa06f16b6488, type: 3}
-  - {fileID: 6937817954938267909, guid: 4c37b75b4e62744e397f123fc1ce0aa0, type: 3}
-  - {fileID: -855298285791758126, guid: 860f8c41bbb684cefa103333a57360ac, type: 3}
+  - {fileID: -2726385615664089275, guid: 0428213696a794966a07b314cddec04b, type: 3}
+  - {fileID: -3070268287083625165, guid: 4a95211e26b344f9590c15aae7a1cdd0, type: 3}
 --- !u!1 &8647645891997185351
 GameObject:
   m_ObjectHideFlags: 0
