@@ -148,16 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7354d60cec59e4952b7d3bad6cb44f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorRenderer: {fileID: 4845986933000841911}
-  groundRenderer: {fileID: 880406072127530861}
-  floorSprites:
+  spriteRenderer: {fileID: 4845986933000841911}
+  sprites:
   - {fileID: -62185345562738595, guid: aaf4077d74ba2d1419042dacfbb29279, type: 3}
   - {fileID: 4222347702808293475, guid: e2d4fe777d1504022a51c20860cdb3cf, type: 3}
   - {fileID: 7378873468257099452, guid: b3ef43d1c28334745abfc6a075775efe, type: 3}
-  groundSprites:
-  - {fileID: 4885342832023100994, guid: 64fed4b38aee546b4b9a263a9c2c3b32, type: 3}
-  - {fileID: 90722707305529920, guid: 459e4eec30a834de2ae3ef01ab7580ea, type: 3}
-  - {fileID: 0}
 --- !u!1 &6626666953330073787
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882039062850460609}
   - component: {fileID: 880406072127530861}
+  - component: {fileID: 643224870146712466}
   m_Layer: 0
   m_Name: BelowGround
   m_TagString: Untagged
@@ -233,15 +229,32 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 4885342832023100994, guid: 64fed4b38aee546b4b9a263a9c2c3b32, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -1496035223740966883, guid: 5447e8fa5ffd3412c9b5fa06f16b6488, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1, y: 0.95}
+  m_Size: {x: 7.16, y: 5.9}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &643224870146712466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6626666953330073787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7354d60cec59e4952b7d3bad6cb44f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 880406072127530861}
+  sprites:
+  - {fileID: -1496035223740966883, guid: 5447e8fa5ffd3412c9b5fa06f16b6488, type: 3}
+  - {fileID: 6937817954938267909, guid: 4c37b75b4e62744e397f123fc1ce0aa0, type: 3}
+  - {fileID: -855298285791758126, guid: 860f8c41bbb684cefa103333a57360ac, type: 3}

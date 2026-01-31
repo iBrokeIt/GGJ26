@@ -44,6 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7498895004706314432}
   - component: {fileID: 7334013424128145767}
+  - component: {fileID: 7651112069651872756}
   m_Layer: 0
   m_Name: LadderHidder
   m_TagString: Untagged
@@ -61,7 +62,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.9, y: 1.55, z: 0}
-  m_LocalScale: {x: 12.912368, y: 5.9029713, z: 2.7324}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4977295075633500876}
@@ -109,18 +110,35 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -1496035223740966883, guid: 5447e8fa5ffd3412c9b5fa06f16b6488, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 2
+  m_Size: {x: 13.28, y: 5.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7651112069651872756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4747043763059558565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7354d60cec59e4952b7d3bad6cb44f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 7334013424128145767}
+  sprites:
+  - {fileID: -1496035223740966883, guid: 5447e8fa5ffd3412c9b5fa06f16b6488, type: 3}
+  - {fileID: 6937817954938267909, guid: 4c37b75b4e62744e397f123fc1ce0aa0, type: 3}
+  - {fileID: -855298285791758126, guid: 860f8c41bbb684cefa103333a57360ac, type: 3}
 --- !u!1 &8647645891997185351
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +214,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -216,6 +234,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4977295075633500876}
     m_Modifications:
+    - target: {fileID: 1353539537814092244, guid: 2a1640bb05377422c9d8e44a37f7d2d0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4897930484183639013, guid: 2a1640bb05377422c9d8e44a37f7d2d0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03285876
