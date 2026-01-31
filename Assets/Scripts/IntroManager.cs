@@ -12,18 +12,6 @@ public class IntroManager : MonoBehaviour
     void Start()
     {
 
-        //if (UnityEngine.EventSystems.EventSystem.current != null)
-        //{
-        //    UnityEngine.EventSystems.EventSystem.current.enabled = false;
-        //    UnityEngine.EventSystems.EventSystem.current.enabled = true;
-        //}
-
-        //if (skipButton != null)
-        //{
-        //    skipButton.onClick.RemoveAllListeners();
-        //    skipButton.onClick.AddListener(onClickSkip);
-        //    Debug.Log("Button link established in Start");
-        //}
     }
 
     // Update is called once per frame

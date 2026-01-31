@@ -60,7 +60,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetAction: {fileID: 0}
-  player: {fileID: 0}
 --- !u!114 &7973366821161568342
 MonoBehaviour:
   m_ObjectHideFlags: 0
