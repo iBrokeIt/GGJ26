@@ -5,7 +5,9 @@ public class FloorUpdater : MonoBehaviour
 {
 
     public SpriteRenderer floorRenderer;
+    public SpriteRenderer groundRenderer;
     public List<Sprite> floorSprites;
+    public List<Sprite> groundSprites;
 
     // Subscribe to the global change event
     void OnEnable() => DimensionSwitcher.OnWorldChanged += UpdateSprite;
@@ -15,12 +17,20 @@ public class FloorUpdater : MonoBehaviour
     {
         if(floorSprites[newSpriteIndex] != null)
         {
-            
-        floorRenderer.sprite = floorSprites[newSpriteIndex];
+            floorRenderer.sprite = floorSprites[newSpriteIndex];
         }
         else
         {
             Debug.LogWarning("Floor sprite not found for index: " + newSpriteIndex);
+        }
+
+        if(groundSprites[newSpriteIndex] != null)
+        {
+            groundRenderer.sprite = groundSprites[newSpriteIndex];
+        }
+        else
+        {
+            Debug.LogWarning("Ground sprite not found for index: " + newSpriteIndex);
         }
     }
 }

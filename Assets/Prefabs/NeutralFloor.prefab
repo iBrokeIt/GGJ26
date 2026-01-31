@@ -149,10 +149,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorRenderer: {fileID: 4845986933000841911}
+  groundRenderer: {fileID: 880406072127530861}
   floorSprites:
   - {fileID: -62185345562738595, guid: aaf4077d74ba2d1419042dacfbb29279, type: 3}
   - {fileID: 4222347702808293475, guid: e2d4fe777d1504022a51c20860cdb3cf, type: 3}
   - {fileID: 7378873468257099452, guid: b3ef43d1c28334745abfc6a075775efe, type: 3}
+  groundSprites:
+  - {fileID: 4885342832023100994, guid: 64fed4b38aee546b4b9a263a9c2c3b32, type: 3}
+  - {fileID: 90722707305529920, guid: 459e4eec30a834de2ae3ef01ab7580ea, type: 3}
+  - {fileID: 0}
 --- !u!1 &6626666953330073787
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1882039062850460609
 Transform:
   m_ObjectHideFlags: 0
