@@ -44,6 +44,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7755172022675307168}
     m_Modifications:
+    - target: {fileID: 2080341312932921086, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3528998959243186144, guid: b7a202dd7c5904d2299c969572b2865f, type: 3}
     - target: {fileID: 3321870838958699312, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_Name
       value: Rope1
@@ -58,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4269430339574377911, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.13
+      value: -1.193
       objectReference: {fileID: 0}
     - target: {fileID: 4269430339574377911, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -94,11 +98,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0
+      value: -0.01999998
       objectReference: {fileID: 0}
     - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -0.5500002
+      value: -1.3225001
       objectReference: {fileID: 0}
     - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_ConnectedRigidBody
@@ -127,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7755172022675307168}
     m_Modifications:
+    - target: {fileID: 2080341312932921086, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5859412040197648837, guid: aff6455457e2e412e8c6c00f3455c0d6, type: 3}
     - target: {fileID: 3321870838958699312, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_Name
       value: Rope4
@@ -176,17 +184,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Anchor.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0
+      value: 0.1960001
       objectReference: {fileID: 0}
     - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -0.55999994
+      value: -1.2074996
       objectReference: {fileID: 0}
     - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 8263193096991213535}
+    - target: {fileID: 4567769075928155817, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567769075928155817, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -227,6 +247,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7755172022675307168}
     m_Modifications:
+    - target: {fileID: 2080341312932921086, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8554170483923089091, guid: 73777d4d3f1f9472390c92781f0bedb5, type: 3}
     - target: {fileID: 3321870838958699312, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_Name
       value: Rope2
@@ -281,7 +305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -0.54999983
+      value: -1.3674995
       objectReference: {fileID: 0}
     - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_ConnectedRigidBody
@@ -310,6 +334,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7755172022675307168}
     m_Modifications:
+    - target: {fileID: 2080341312932921086, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -267639787873920597, guid: 198cf862e17974b368611c780ccba60a, type: 3}
     - target: {fileID: 3321870838958699312, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_Name
       value: Rope0
@@ -320,11 +348,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4269430339574377911, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.03
+      value: -0.025
       objectReference: {fileID: 0}
     - target: {fileID: 4269430339574377911, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.08
+      value: -0.224
       objectReference: {fileID: 0}
     - target: {fileID: 4269430339574377911, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -360,11 +388,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -1.8291272
+      value: -1.8241272
       objectReference: {fileID: 0}
     - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 3.42
+      value: 3.216
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -389,6 +417,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7755172022675307168}
     m_Modifications:
+    - target: {fileID: 2080341312932921086, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2642164750449988555, guid: 3eb3aa06bc259473dbc1dfe4886b08fd, type: 3}
     - target: {fileID: 3321870838958699312, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_Name
       value: Rope3
@@ -399,11 +431,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4269430339574377911, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.03
+      value: -0.079
       objectReference: {fileID: 0}
     - target: {fileID: 4269430339574377911, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.23
+      value: -3.167
       objectReference: {fileID: 0}
     - target: {fileID: 4269430339574377911, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_LocalPosition.z
@@ -438,17 +470,37 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Anchor.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Anchor.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0
+      value: 0.00399971
       objectReference: {fileID: 0}
     - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -0.5500002
+      value: -1.4675006
       objectReference: {fileID: 0}
     - target: {fileID: 4516889629569330873, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 3009790136468044594}
+    - target: {fileID: 4567769075928155817, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567769075928155817, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567769075928155817, guid: 91a83ac35ce5e4455b1fff71264a14da, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

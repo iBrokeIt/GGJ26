@@ -26,6 +26,9 @@ public class PlayerContoller : MonoBehaviour
     [System.NonSerialized]
     public bool isGrabbingRope;
     Animator animator;
+    SpriteRenderer spriteRenderer;
+    float meanSpeed;
+
 
     void Start()
     {
@@ -35,6 +38,7 @@ public class PlayerContoller : MonoBehaviour
         isJumping = false;
         platformRb = null;
         isGrabbingRope = false;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -71,11 +75,15 @@ public class PlayerContoller : MonoBehaviour
             GroundMovement();
             if (isGrounded) {
                 speed = Mathf.Abs(rb.linearVelocityX);
+                Debug.Log(rb.linearVelocityX);
             }
         }
-        animator.SetFloat("speed", speed);
-
-        Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
+        meanSpeed = meanSpeed * 0.67f + speed * 0.33f;
+        animator.SetFloat("speed", meanSpeed);
+        if (rb.linearVelocityX != 0) {
+            spriteRenderer.flipX = rb.linearVelocityX < 0;
+        }
+        
         animator.SetFloat("verticalSpeed", rb.linearVelocityY);
 
 

@@ -1,0 +1,1105 @@
+fileFormatVersion: 2
+guid: 893415a20867e65499140a36db56ba15
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5379852465223872509
+    second: VILLAGE BLOCK_0
+  - first:
+      213: -4571276409505393917
+    second: VILLAGE BLOCK_1
+  - first:
+      213: 40621374404498239
+    second: VILLAGE BLOCK_2
+  - first:
+      213: 3157213408137124367
+    second: VILLAGE BLOCK_3
+  - first:
+      213: 4387940498876786911
+    second: VILLAGE BLOCK_4
+  - first:
+      213: -8772834604629144833
+    second: VILLAGE BLOCK_5
+  - first:
+      213: 6923936990048440286
+    second: VILLAGE BLOCK_6
+  - first:
+      213: 5427960182403525932
+    second: VILLAGE BLOCK_7
+  - first:
+      213: -8312968693754209226
+    second: VILLAGE BLOCK_8
+  - first:
+      213: -8653185611924772782
+    second: VILLAGE BLOCK_9
+  - first:
+      213: 5359252384390033536
+    second: VILLAGE BLOCK_10
+  - first:
+      213: -1652319350369834274
+    second: VILLAGE BLOCK_11
+  - first:
+      213: 712041176466178255
+    second: VILLAGE BLOCK_12
+  - first:
+      213: -8944380328130672552
+    second: VILLAGE BLOCK_13
+  - first:
+      213: -3205024017294613659
+    second: VILLAGE BLOCK_14
+  - first:
+      213: -133271576567821540
+    second: VILLAGE BLOCK_15
+  - first:
+      213: -5541504660325376502
+    second: VILLAGE BLOCK_16
+  - first:
+      213: 4707414554768264091
+    second: VILLAGE BLOCK_17
+  - first:
+      213: 2419744390250631905
+    second: VILLAGE BLOCK_18
+  - first:
+      213: -7058113755493303679
+    second: VILLAGE BLOCK_19
+  - first:
+      213: -5919097081503545005
+    second: VILLAGE BLOCK_20
+  - first:
+      213: 6600546833352526593
+    second: VILLAGE BLOCK_21
+  - first:
+      213: -5733268570530192242
+    second: VILLAGE BLOCK_22
+  - first:
+      213: 3194290057587475824
+    second: VILLAGE BLOCK_23
+  - first:
+      213: -747949588458371515
+    second: VILLAGE BLOCK_24
+  - first:
+      213: -1634480880166787252
+    second: VILLAGE BLOCK_25
+  - first:
+      213: 302058249965672946
+    second: VILLAGE BLOCK_26
+  - first:
+      213: -3504689420139351510
+    second: VILLAGE BLOCK_27
+  - first:
+      213: 6924757962773245931
+    second: VILLAGE BLOCK_28
+  - first:
+      213: -1955009988213556971
+    second: VILLAGE BLOCK_29
+  - first:
+      213: -905100686100774553
+    second: VILLAGE BLOCK_30
+  - first:
+      213: 1821040352267191935
+    second: VILLAGE BLOCK_31
+  - first:
+      213: -6708901493169448116
+    second: VILLAGE BLOCK_32
+  - first:
+      213: 6043332615173488455
+    second: VILLAGE BLOCK_33
+  - first:
+      213: -9139681385255901834
+    second: VILLAGE BLOCK_34
+  - first:
+      213: -151480710303074648
+    second: VILLAGE BLOCK_35
+  - first:
+      213: 4701660496372827613
+    second: VILLAGE BLOCK_36
+  - first:
+      213: 949850369563662481
+    second: VILLAGE BLOCK_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 220
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3005252cface655b0800000000000000
+      internalID: -5379852465223872509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 142
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303de4143509f80c0800000000000000
+      internalID: -4571276409505393917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 983
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f331bafbce0509000800000000000000
+      internalID: 40621374404498239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 732
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a1d18fddca0db20800000000000000
+      internalID: 3157213408137124367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_4
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 348
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8e91ba2a815ec30800000000000000
+      internalID: 4387940498876786911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 326
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffa43d55861a04680800000000000000
+      internalID: -8772834604629144833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 286
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf46030204c61060800000000000000
+      internalID: 6923936990048440286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_7
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 271
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2d602ff60df35b40800000000000000
+      internalID: 5427960182403525932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 231
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63c56db540762ac80800000000000000
+      internalID: -8312968693754209226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 91
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 258e3b15885b9e780800000000000000
+      internalID: -8653185611924772782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_10
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 807
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 080bb3926a3ef5a40800000000000000
+      internalID: 5359252384390033536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_11
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 620
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edaa3b12e48c119e0800000000000000
+      internalID: -1652319350369834274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_12
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 388
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0c7bc6dada1e900800000000000000
+      internalID: 712041176466178255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_13
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 246
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85887cd1b7d2fd380800000000000000
+      internalID: -8944380328130672552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_14
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 84
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5632f8023a77583d0800000000000000
+      internalID: -3205024017294613659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_15
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 60
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1bc40c0536862ef0800000000000000
+      internalID: -133271576567821540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_16
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 54
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e52202fde9813b0800000000000000
+      internalID: -5541504660325376502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_17
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 38
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b477bb898145140800000000000000
+      internalID: 4707414554768264091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_18
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 30
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e2122cd3b8a49120800000000000000
+      internalID: 2419744390250631905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_19
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 8
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18af5835fea8c0e90800000000000000
+      internalID: -7058113755493303679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_20
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 486
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3590ee9a0942bdda0800000000000000
+      internalID: -5919097081503545005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_21
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 238
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b8e4daf5ad99b50800000000000000
+      internalID: 6600546833352526593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_22
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 182
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e84e2ab7c965f60b0800000000000000
+      internalID: -5733268570530192242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_23
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 166
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 075401022e5645c20800000000000000
+      internalID: 3194290057587475824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_24
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 0
+        width: 739
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5460a06efcfbe95f0800000000000000
+      internalID: -747949588458371515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_25
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 0
+        width: 67
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c47ad71ac482159e0800000000000000
+      internalID: -1634480880166787252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_26
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 446
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f91ea2c060213400800000000000000
+      internalID: 302058249965672946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_27
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 396
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2236808a87dc5fc0800000000000000
+      internalID: -3504689420139351510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_28
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 198
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bef28ae9daea91060800000000000000
+      internalID: 6924757962773245931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_29
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 547
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519b03816c86ed4e0800000000000000
+      internalID: -1955009988213556971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_30
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 147
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761400fa8bf6073f0800000000000000
+      internalID: -905100686100774553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_31
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 448
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76c9865d82a54910800000000000000
+      internalID: 1821040352267191935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_32
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 440
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b1c8223a135e2a0800000000000000
+      internalID: -6708901493169448116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_33
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 768
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74fb2fa9efa3ed350800000000000000
+      internalID: 6043332615173488455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_34
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 648
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67562974434592180800000000000000
+      internalID: -9139681385255901834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_35
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 535
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a6bf08b815d5edf0800000000000000
+      internalID: -151480710303074648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_36
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 39
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd50acc9f47af3140800000000000000
+      internalID: 4701660496372827613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VILLAGE BLOCK_37
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 0
+        width: 468
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1989d9be0eb8e2d00800000000000000
+      internalID: 949850369563662481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      VILLAGE BLOCK_0: -5379852465223872509
+      VILLAGE BLOCK_1: -4571276409505393917
+      VILLAGE BLOCK_10: 5359252384390033536
+      VILLAGE BLOCK_11: -1652319350369834274
+      VILLAGE BLOCK_12: 712041176466178255
+      VILLAGE BLOCK_13: -8944380328130672552
+      VILLAGE BLOCK_14: -3205024017294613659
+      VILLAGE BLOCK_15: -133271576567821540
+      VILLAGE BLOCK_16: -5541504660325376502
+      VILLAGE BLOCK_17: 4707414554768264091
+      VILLAGE BLOCK_18: 2419744390250631905
+      VILLAGE BLOCK_19: -7058113755493303679
+      VILLAGE BLOCK_2: 40621374404498239
+      VILLAGE BLOCK_20: -5919097081503545005
+      VILLAGE BLOCK_21: 6600546833352526593
+      VILLAGE BLOCK_22: -5733268570530192242
+      VILLAGE BLOCK_23: 3194290057587475824
+      VILLAGE BLOCK_24: -747949588458371515
+      VILLAGE BLOCK_25: -1634480880166787252
+      VILLAGE BLOCK_26: 302058249965672946
+      VILLAGE BLOCK_27: -3504689420139351510
+      VILLAGE BLOCK_28: 6924757962773245931
+      VILLAGE BLOCK_29: -1955009988213556971
+      VILLAGE BLOCK_3: 3157213408137124367
+      VILLAGE BLOCK_30: -905100686100774553
+      VILLAGE BLOCK_31: 1821040352267191935
+      VILLAGE BLOCK_32: -6708901493169448116
+      VILLAGE BLOCK_33: 6043332615173488455
+      VILLAGE BLOCK_34: -9139681385255901834
+      VILLAGE BLOCK_35: -151480710303074648
+      VILLAGE BLOCK_36: 4701660496372827613
+      VILLAGE BLOCK_37: 949850369563662481
+      VILLAGE BLOCK_4: 4387940498876786911
+      VILLAGE BLOCK_5: -8772834604629144833
+      VILLAGE BLOCK_6: 6923936990048440286
+      VILLAGE BLOCK_7: 5427960182403525932
+      VILLAGE BLOCK_8: -8312968693754209226
+      VILLAGE BLOCK_9: -8653185611924772782
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

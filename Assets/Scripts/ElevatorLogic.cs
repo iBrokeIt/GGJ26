@@ -5,7 +5,6 @@ public class ElevatorLogic : MonoBehaviour
 
     public Transform posA, posB;
     public float speed = 2f;
-    
     private Rigidbody2D rb;
     Vector3 targetPos;           
 
@@ -13,21 +12,20 @@ public class ElevatorLogic : MonoBehaviour
     {
         targetPos = posB.position;
         rb = GetComponent<Rigidbody2D>();
-
     }
 
-    void FixedUpdate()
+    void Update()
     {
-       
         if (Vector2.Distance(transform.position, targetPos) < 0.1f)
         {
             targetPos = (targetPos == posA.position) ? posB.position : posA.position;
         }
-        rb.linearVelocity = (targetPos - transform.position).normalized * speed;
+        float distance = Vector2.Distance(transform.position, targetPos);
+        float platSpeed = speed;
+        if (distance < 3f && speed > 3f)
+        {
+            platSpeed = 2f;
+        }
+        rb.linearVelocity = (targetPos - transform.position).normalized * platSpeed;
     }
-
-
-
-  
-
 }
