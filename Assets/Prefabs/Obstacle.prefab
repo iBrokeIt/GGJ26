@@ -105,8 +105,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 5931350314185098189}
   sprites:
   - {fileID: -3663761578151886962, guid: e07b5e13ef9164b4c9986b0c4654e6b9, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6663066065264963362, guid: 228a31fa84850492eb347f9f0ca1638b, type: 3}
+  - {fileID: 6663066065264963362, guid: 228a31fa84850492eb347f9f0ca1638b, type: 3}
 --- !u!114 &-2964157054872022873
 MonoBehaviour:
   m_ObjectHideFlags: 0

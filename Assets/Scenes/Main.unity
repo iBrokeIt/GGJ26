@@ -1812,7 +1812,7 @@ BoxCollider2D:
     border: {x: 1.3866668, y: 0, z: 1.4433334, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 11.076667, y: 3.1856236}
-    newSize: {x: 15, y: 5.25}
+    newSize: {x: 14.8, y: 5.43}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
@@ -3489,8 +3489,8 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 100.133446, y: 40}
       - {x: -35, y: 40}
-      - {x: -35, y: -10}
-      - {x: 100, y: -10}
+      - {x: -35, y: -15}
+      - {x: 100, y: -15}
   m_UseDelaunayMesh: 0
 --- !u!4 &697650835
 Transform:
@@ -5439,7 +5439,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 150, y: 10.24}
+  m_Size: {x: 150, y: 40}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -8295,6 +8295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1966961591}
   - component: {fileID: 1966961592}
+  - component: {fileID: 1966961593}
   m_Layer: 0
   m_Name: FallDeatColider
   m_TagString: Untagged
@@ -8347,7 +8348,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -8363,6 +8364,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 150, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1966961593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966961590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b554f012060eb4aa2a85acb087e5f856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1975966264
 GameObject:
   m_ObjectHideFlags: 0
@@ -8662,10 +8675,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2214170996379304364, guid: dcfe088201713e04d89cbc9fa42fc57f, type: 3}
       propertyPath: 'sprites.Array.data[1]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2214170996379304364, guid: dcfe088201713e04d89cbc9fa42fc57f, type: 3}
-      propertyPath: 'sprites.Array.data[2]'
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5931350314185098189, guid: dcfe088201713e04d89cbc9fa42fc57f, type: 3}
@@ -8975,11 +8984,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4977295075633500876, guid: aaf2d2c6b9272483daf00cbcbcfe9ece, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4977295075633500876, guid: aaf2d2c6b9272483daf00cbcbcfe9ece, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: 4977295075633500876, guid: aaf2d2c6b9272483daf00cbcbcfe9ece, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9023,7 +9032,11 @@ PrefabInstance:
       objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
     - target: {fileID: 7334013424128145767, guid: aaf2d2c6b9272483daf00cbcbcfe9ece, type: 3}
       propertyPath: m_Size.x
-      value: 15
+      value: 14.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334013424128145767, guid: aaf2d2c6b9272483daf00cbcbcfe9ece, type: 3}
+      propertyPath: m_Size.y
+      value: 5.43
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
