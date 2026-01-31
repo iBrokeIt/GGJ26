@@ -13,9 +13,21 @@ public class FloorUpdater : MonoBehaviour
     void OnEnable() => DimensionSwitcher.OnWorldChanged += UpdateSprite;
     void OnDisable() => DimensionSwitcher.OnWorldChanged -= UpdateSprite;
 
+    void Start()
+    {
+        if(!floorRenderer)
+        {
+            Debug.LogWarning("Floor Renderer is not assigned in FloorUpdater.");
+        }
+        if(!groundRenderer)
+        {
+            Debug.LogWarning("Ground Renderer is not assigned in FloorUpdater.");
+        }
+    }
+
     void UpdateSprite(int newSpriteIndex)
     {
-        if(floorSprites[newSpriteIndex] != null)
+        if(floorSprites != null && floorSprites[newSpriteIndex] != null)
         {
             floorRenderer.sprite = floorSprites[newSpriteIndex];
         }
@@ -24,7 +36,7 @@ public class FloorUpdater : MonoBehaviour
             Debug.LogWarning("Floor sprite not found for index: " + newSpriteIndex);
         }
 
-        if(groundSprites[newSpriteIndex] != null)
+        if(groundSprites != null && groundSprites[newSpriteIndex] != null)
         {
             groundRenderer.sprite = groundSprites[newSpriteIndex];
         }
