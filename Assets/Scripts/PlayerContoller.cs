@@ -30,6 +30,14 @@ public class PlayerContoller : MonoBehaviour
     float meanSpeed;
 
 
+    private void Awake()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.RegisterPlayer(this.gameObject);
+        }
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -137,6 +145,11 @@ public class PlayerContoller : MonoBehaviour
 
     public float GetHorizontalDirection()
     {
+        if (moveAction == null || moveAction.action == null)
+        {
+            Debug.LogWarning("Move Action is missing on " + gameObject.name);
+            return 0f;
+        }
         Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
         return moveInput.x;
     }
