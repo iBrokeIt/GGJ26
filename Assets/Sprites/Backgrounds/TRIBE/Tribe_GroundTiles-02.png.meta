@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: d0dee80904f42334a80ab9c8a142addc
+guid: 7fb1c176bbd7a4a3cb81bf10a210d48c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1816782336226047656
-    second: "\u05E2\u05E0\u05E0\u05D9\u05DD (\u05D3\u05E8\u05DA)_0"
-  - first:
-      213: -2961352573727489284
-    second: "\u05E2\u05E0\u05E0\u05D9\u05DD (\u05D3\u05E8\u05DA)_1"
-  - first:
-      213: -5159635912427301694
-    second: "\u05E2\u05E0\u05E0\u05D9\u05DD (\u05D3\u05E8\u05DA)_2"
+      213: -7705074863880367601
+    second: Tribe_GroundTiles-02_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 0
@@ -57,7 +51,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,35 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u05E2\u05E0\u05E0\u05D9\u05DD (\u05D3\u05E8\u05DA)_0"
+      name: Tribe_GroundTiles-02_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 44
-        width: 1536
-        height: 343
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 194, y: 128, z: 111, w: 46}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 859ca07471e79c6e0800000000000000
-      internalID: -1816782336226047656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u05E2\u05E0\u05E0\u05D9\u05DD (\u05D3\u05E8\u05DA)_1"
-      rect:
-        serializedVersion: 2
-        x: 1166
-        y: 29
-        width: 155
-        height: 23
+        y: 0
+        width: 2443
+        height: 893
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf2c84c268927e6d0800000000000000
-      internalID: -2961352573727489284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u05E2\u05E0\u05E0\u05D9\u05DD (\u05D3\u05E8\u05DA)_2"
-      rect:
-        serializedVersion: 2
-        x: 1187
-        y: 23
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2c41c6d797a4568b0800000000000000
-      internalID: -5159635912427301694
+      spriteID: f029e9a0c33121590800000000000000
+      internalID: -7705074863880367601
       vertices: []
       indices: 
       edges: []
@@ -175,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a3798fdb6335e4941a8cd9b54f1eca2e
+    spriteID: d8f5a0489f8af4ee1bfa26e24a417482
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u05E2\u05E0\u05E0\u05D9\u05DD (\u05D3\u05E8\u05DA)_0": -1816782336226047656
-      "\u05E2\u05E0\u05E0\u05D9\u05DD (\u05D3\u05E8\u05DA)_1": -2961352573727489284
-      "\u05E2\u05E0\u05E0\u05D9\u05DD (\u05D3\u05E8\u05DA)_2": -5159635912427301694
+      Tribe_GroundTiles-02_0: -7705074863880367601
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
