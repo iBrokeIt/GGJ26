@@ -178,4 +178,11 @@ public class PlayerContoller : MonoBehaviour
         }
     }
 
+    public void DisableInput()
+    {
+        moveAction.action.Disable();
+        jumpAction.action.Disable();
+        interactAction.action.Disable();
+    }
+
 }
