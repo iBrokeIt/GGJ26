@@ -144,6 +144,7 @@ public class DimensionSwitcher : MonoBehaviour
         RemoveDimension(currentDimensionIndex);
         ApplyDimension(nextDimensionIndex);
         animator.SetTrigger(dimensions[nextDimensionIndex].name);
+        animator.Update(Time.deltaTime);
         currentDimensionIndex = nextDimensionIndex;
     }
     
