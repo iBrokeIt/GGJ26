@@ -18,7 +18,7 @@ public class PlayerContoller : MonoBehaviour
     private float lastStepTime;
     public bool allowUp;
     public float xOffsetFlip;
-    private bool isFlipped;
+    private float direction;
 
     Rigidbody2D rb;
 
@@ -45,7 +45,7 @@ public class PlayerContoller : MonoBehaviour
         isJumping = false;
         platformRb = null;
         isGrabbingRope = false;
-        isFlipped = false;
+        direction = 1f;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -92,10 +92,12 @@ public class PlayerContoller : MonoBehaviour
         meanSpeed = meanSpeed * 0.67f + speed * 0.33f;
         animator.SetFloat("speed", meanSpeed);
         // Flip sprite based on movement direction, but only if there is some movement
-        if (rb.linearVelocityX != 0)
+        float currDirection = Mathf.Sign(rb.linearVelocityX);
+        if (Mathf.Abs(rb.linearVelocityX) > 0.1f && currDirection != direction)
         {
+            direction = currDirection;
             Vector3 scale = transform.localScale;
-            scale.x = Mathf.Sign(rb.linearVelocityX) * Mathf.Abs(scale.x);
+            scale.x = direction * Mathf.Abs(scale.x);
             transform.localScale = scale;
             Vector3 pos = transform.localPosition;
             pos.x += Mathf.Sign(rb.linearVelocityX) * xOffsetFlip;
