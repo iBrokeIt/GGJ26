@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: f7ff4ccb10c815a43970416daedd583d
+guid: 5430e222e2da34057995653acdde7d82
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2838164072246348389
-    second: VILLAGE_0
-  - first:
-      213: -7415142622883366494
-    second: VILLAGE_1
+      213: 4885342832023100994
+    second: Tribe_GroundTiles-03_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,45 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: VILLAGE_0
+      name: Tribe_GroundTiles-03_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1517
-        height: 1024
+        width: 2443
+        height: 955
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56a058cbf2f236720800000000000000
-      internalID: 2838164072246348389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VILLAGE_1
-      rect:
-        serializedVersion: 2
-        x: 722
-        y: 0
-        width: 792
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a9bd24521f181990800000000000000
-      internalID: -7415142622883366494
+      spriteID: 24edcbc0c693cc340800000000000000
+      internalID: 4885342832023100994
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      VILLAGE_0: 2838164072246348389
-      VILLAGE_1: -7415142622883366494
+      Tribe_GroundTiles-03_0: 4885342832023100994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
