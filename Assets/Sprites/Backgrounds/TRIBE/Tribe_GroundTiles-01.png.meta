@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d5687a1385f21394b8bb47d8df8015cb
+guid: f6ec76e3bab744cd09c27c6ea7183087
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2986918462815087240
-    second: COTTON BLOCK_0
+      213: -1071724734971332904
+    second: Tribe_GroundTiles-01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: COTTON BLOCK_0
+      name: Tribe_GroundTiles-01_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 0
         y: 0
-        width: 1516
-        height: 1024
+        width: 469
+        height: 834
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88a262d348aa37920800000000000000
-      internalID: 2986918462815087240
+      spriteID: 8d6b80328087021f0800000000000000
+      internalID: -1071724734971332904
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      COTTON BLOCK_0: 2986918462815087240
+      Tribe_GroundTiles-01_0: -1071724734971332904
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

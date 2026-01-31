@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -24,6 +25,7 @@ public class DimensionSwitcher : MonoBehaviour
 
     [Header("Singleton")]
     public static DimensionSwitcher Instance { get; private set; }
+    public static event Action<int> OnWorldChanged;
 
     [Header("Configuration")]
     public Camera mainCam;
@@ -141,9 +143,11 @@ public class DimensionSwitcher : MonoBehaviour
     {        
         if (nextDimensionIndex == currentDimensionIndex) return;
         PlayRandomDimensionSwitchSFX();
+        OnWorldChanged?.Invoke(nextDimensionIndex);
         RemoveDimension(currentDimensionIndex);
         ApplyDimension(nextDimensionIndex);
         animator.SetTrigger(dimensions[nextDimensionIndex].name);
+        animator.Update(Time.deltaTime);
         currentDimensionIndex = nextDimensionIndex;
     }
     
@@ -183,7 +187,7 @@ public class DimensionSwitcher : MonoBehaviour
     {
         if (dimensionSwitchSFX.Count == 0) return;
 
-        int randomIndex = Random.Range(0, dimensionSwitchSFX.Count);
+        int randomIndex = UnityEngine.Random.Range(0, dimensionSwitchSFX.Count);
         AudioManager.Instance.PlaySFX(dimensionSwitchSFX[randomIndex]);
     }
 

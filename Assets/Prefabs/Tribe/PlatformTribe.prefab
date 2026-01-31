@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1732777340437857632}
   - component: {fileID: 7032999063640756950}
   - component: {fileID: 3854042038104343322}
-  m_Layer: 0
-  m_Name: Platform
+  m_Layer: 6
+  m_Name: PlatformTribe
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
