@@ -1,6 +1,9 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+
 
 public class AltarScript : MonoBehaviour
 {
@@ -15,6 +18,7 @@ public class AltarScript : MonoBehaviour
     public AudioClip finishSound;
     public float interactionCooldown = 1f;
     float lastInteractionTime = 0f;
+    public TextMeshProUGUI finishText;
     void Start()
     {
         PlayerContoller playerController = player.GetComponent<PlayerContoller>();
@@ -30,6 +34,7 @@ public class AltarScript : MonoBehaviour
             Debug.LogWarning("Mismatch between number of collectible sounds and altar collectibles.");
         }
         visualHint.SetActive(false);
+        finishText.gameObject.SetActive(false);
     }
 
     void OnDisable()
@@ -77,6 +82,9 @@ public class AltarScript : MonoBehaviour
             // Maybe add some sound or visual effect here
             Debug.Log("Altar activated!");
             Invoke("PlayFinishSequence", interactionCooldown);
+            Invoke("ResetGame", interactionCooldown + 5f);
+            
+            player.GetComponent<PlayerContoller>().DisableInput();
         }
     }
 
@@ -84,7 +92,12 @@ public class AltarScript : MonoBehaviour
     {
         Debug.Log("Playing altar finish sequence!");
         AudioManager.Instance.PlaySFX(finishSound);
-        // Implement the finish sequence logic here
+        finishText.gameObject.SetActive(true);
+    }
+
+    void ResetGame()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     void OnTriggerExit2D(Collider2D other)
