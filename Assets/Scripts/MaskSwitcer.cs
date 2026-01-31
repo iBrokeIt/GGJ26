@@ -38,6 +38,7 @@ public class DimensionSwitcher : MonoBehaviour
     private bool devMode = false;
     private int playerLayerIndex;
     private int currentDimensionIndex = 0;
+    private Animator animator;
 
     void Awake()
     {
@@ -59,6 +60,7 @@ public class DimensionSwitcher : MonoBehaviour
         InitializeDimensions();
         ApplyDimension(currentDimensionIndex);
         AudioManager.Instance.SetActiveMusicLayer(currentDimensionIndex);
+        animator = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -141,7 +143,7 @@ public class DimensionSwitcher : MonoBehaviour
         PlayRandomDimensionSwitchSFX();
         RemoveDimension(currentDimensionIndex);
         ApplyDimension(nextDimensionIndex);
-
+        animator.SetTrigger(dimensions[nextDimensionIndex].name);
         currentDimensionIndex = nextDimensionIndex;
     }
     
