@@ -100,10 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7354d60cec59e4952b7d3bad6cb44f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorRenderer: {fileID: 5931350314185098189}
-  groundRenderer: {fileID: 0}
-  floorSprites:
+  spriteRenderer: {fileID: 5931350314185098189}
+  sprites:
   - {fileID: -3663761578151886962, guid: e07b5e13ef9164b4c9986b0c4654e6b9, type: 3}
   - {fileID: 0}
-  - {fileID: -62185345562738595, guid: 142e84dfd904d034faedf5985f47a83a, type: 3}
-  groundSprites: []
+  - {fileID: 0}

@@ -1809,12 +1809,12 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 1.3866668, y: 0, z: 1.4433334, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 11.076667, y: 3.1856236}
+    newSize: {x: 15, y: 5.25}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
@@ -3665,11 +3665,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5560356340435234797, guid: 3aa381110145c594db080bdabfab0725, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.991686
+      value: 16.482729
       objectReference: {fileID: 0}
     - target: {fileID: 5560356340435234797, guid: 3aa381110145c594db080bdabfab0725, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2822053
+      value: 0.6580889
       objectReference: {fileID: 0}
     - target: {fileID: 5560356340435234797, guid: 3aa381110145c594db080bdabfab0725, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5284,7 +5284,8 @@ PrefabInstance:
       value: 14.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6626666953330073787, guid: ebfee84536b674f35807d6c1c29f359a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebfee84536b674f35807d6c1c29f359a, type: 3}
@@ -6941,7 +6942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2189245725860302563, guid: e7a4d1eabf7d5fb4d83f77c2cf92d5c7, type: 3}
       propertyPath: bounceForce
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8148,11 +8149,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9105151390165732911, guid: 5750b74a19e20a14594656f30a4bef2f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.158957
+      value: 14.65
       objectReference: {fileID: 0}
     - target: {fileID: 9105151390165732911, guid: 5750b74a19e20a14594656f30a4bef2f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6341165
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 9105151390165732911, guid: 5750b74a19e20a14594656f30a4bef2f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8572,6 +8573,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2214170996379304364, guid: dcfe088201713e04d89cbc9fa42fc57f, type: 3}
+      propertyPath: 'sprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2214170996379304364, guid: dcfe088201713e04d89cbc9fa42fc57f, type: 3}
+      propertyPath: 'sprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5931350314185098189, guid: dcfe088201713e04d89cbc9fa42fc57f, type: 3}
       propertyPath: m_Size.x
       value: 9
@@ -8865,6 +8874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HiddenCollectible
       objectReference: {fileID: 0}
+    - target: {fileID: 4747043763059558565, guid: aaf2d2c6b9272483daf00cbcbcfe9ece, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4977295075633500876, guid: aaf2d2c6b9272483daf00cbcbcfe9ece, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -8921,6 +8934,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+    - target: {fileID: 7334013424128145767, guid: aaf2d2c6b9272483daf00cbcbcfe9ece, type: 3}
+      propertyPath: m_Size.x
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8647645891997185351, guid: aaf2d2c6b9272483daf00cbcbcfe9ece, type: 3}

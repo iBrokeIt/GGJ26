@@ -1,13 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloorUpdater : MonoBehaviour
+public class SpriteSwitcher : MonoBehaviour
 {
 
-    public SpriteRenderer floorRenderer;
-    public SpriteRenderer groundRenderer;
-    public List<Sprite> floorSprites;
-    public List<Sprite> groundSprites;
+    public SpriteRenderer spriteRenderer;
+    public List<Sprite> sprites;
 
     // Subscribe to the global change event
     void OnEnable() => DimensionSwitcher.OnWorldChanged += UpdateSprite;
@@ -15,34 +13,22 @@ public class FloorUpdater : MonoBehaviour
 
     void Start()
     {
-        if(!floorRenderer)
+        if(!spriteRenderer)
         {
-            Debug.LogWarning("Floor Renderer is not assigned in FloorUpdater.");
-        }
-        if(!groundRenderer)
-        {
-            Debug.LogWarning("Ground Renderer is not assigned in FloorUpdater.");
+            Debug.LogWarning("Sprite Renderer is not assigned in SpriteSwitcher.");
         }
     }
 
     void UpdateSprite(int newSpriteIndex)
     {
-        if(floorSprites != null && floorSprites[newSpriteIndex] != null)
+        if(spriteRenderer && sprites[newSpriteIndex] != null)
         {
-            floorRenderer.sprite = floorSprites[newSpriteIndex];
+            spriteRenderer.sprite = sprites[newSpriteIndex];
         }
         else
         {
-            Debug.LogWarning("Floor sprite not found for index: " + newSpriteIndex);
-        }
-
-        if(groundSprites != null && groundSprites[newSpriteIndex] != null)
-        {
-            groundRenderer.sprite = groundSprites[newSpriteIndex];
-        }
-        else
-        {
-            Debug.LogWarning("Ground sprite not found for index: " + newSpriteIndex);
+            Debug.LogWarning("Sprite not found for index: " + newSpriteIndex);
+            spriteRenderer.sprite = null;
         }
     }
 }
