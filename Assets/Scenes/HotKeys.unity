@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 399771662}
   - component: {fileID: 399771664}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Story
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -383,8 +383,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 506.9485, y: 92.021}
+  m_AnchoredPosition: {x: 0, y: 2938}
+  m_SizeDelta: {x: 442.8381, y: 88.5612}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &399771662
 MonoBehaviour:
@@ -406,30 +406,29 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Intro Story\r\n\r\nIn the village of Ile-Ogbo, there lived a small boy
-    named Yoru\r\n\r\nYoru was the son of the village Babalawo\r\nthe spiritual leader
-    and keeper of ancient knowledge\r\n\r\nYoru had one true companion: his beloved
-    pet, Sonubare\r\nOne day, Sonubare disappeared\r\n\r\nYoru searched everywhere\r\nHe
-    spoke to the adults of the village, but they would not help him\r\nThey looked
-    afraid\r\n\r\nWith no one left to turn to, Yoru made a dangerous choice\r\n\r\nHe
-    stole his father\u2019s ancient masks\r\n\r\nThe masks held great power\r\nWhen
-    worn, they revealed other realities\r\nRere and Apaadi, the Good and the Bad
-    afterlife\r\n\r\nThrough these worlds, Yoru set out into the forest\r\nhoping
-    to find his lost friend\r\n\r\nBut something was wrong\r\n\r\nThese worlds looked
-    familiar\r\nToo familiar\u2026\r\nThey resembled his village\u2026 yet twisted
-    by something unseen\r\n\r\nWhy do the afterlives look like home?\r\n\r\nWill
-    Yoru survive his journey?\r\nWill he find Sonubare?\r\n\r\nAnd will you help
-    him return?\r\n\u2003\r\nOutro\r\n"
+  m_text: "\r\nIn the village of Ile-Ogbo, there lived a small boy named Yoru\r\n\r\nYoru
+    was the son of the village Babalawo\r\nthe spiritual leader and keeper of ancient
+    knowledge\r\n\r\nYoru had one true companion: his beloved pet, Sonubare\r\nOne
+    day, Sonubare disappeared\r\n\r\nYoru searched everywhere\r\nHe spoke to the
+    adults of the village, but they would not help him\r\nThey looked afraid\r\n\r\nWith
+    no one left to turn to, Yoru made a dangerous choice\r\n\r\nHe stole his father\u2019s
+    ancient masks\r\n\r\nThe masks held great power\r\nWhen worn, they revealed other
+    realities\r\nRere and Apaadi, the Good and the Bad afterlife\r\n\r\nThrough these
+    worlds, Yoru set out into the forest\r\nhoping to find his lost friend\r\n\r\nBut
+    something was wrong\r\n\r\nThese worlds looked familiar\r\nToo familiar\u2026\r\nThey
+    resembled his village\u2026 yet twisted by something unseen\r\n\r\nWhy do the
+    afterlives look like home?\r\n\r\nWill Yoru survive his journey?\r\nWill he find
+    Sonubare?\r\n\r\nAnd will you help him return?\r\n\u2003\r\nOutro\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 07d5679645e39b544b89cb9065805ca5, type: 2}
+  m_sharedMaterial: {fileID: 6203472618819446260, guid: 07d5679645e39b544b89cb9065805ca5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283019486
+  m_fontColor: {r: 0.87058824, g: 0.6909372, b: 0.2862745, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -446,8 +445,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33
-  m_fontSizeBase: 33
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -459,7 +458,7 @@ MonoBehaviour:
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 22
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -485,7 +484,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 4.4724197, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -853,13 +852,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 5df1a27af0a1f3c40bbc53efd890425b, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1467572905}
+        m_TargetAssemblyTypeName: IntroManager, Assembly-CSharp
+        m_MethodName: onClickSkip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -903,6 +902,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247897210}
   m_CullTransparentMesh: 1
+--- !u!1 &1467572904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1467572906}
+  - component: {fileID: 1467572905}
+  - component: {fileID: 1467572907}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1467572905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467572904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4416940daa4fa9f48930326dc6179d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storyText: {fileID: 399771661}
+  endYPosition: 3816
+--- !u!4 &1467572906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467572904}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1467572907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467572904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df1a27af0a1f3c40bbc53efd890425b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetAction: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -910,3 +969,4 @@ SceneRoots:
   - {fileID: 18658614}
   - {fileID: 690976909}
   - {fileID: 1135802741}
+  - {fileID: 1467572906}
