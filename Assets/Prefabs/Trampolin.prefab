@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235126bbf144445cbb2eb84136860874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloudJumpSound: {fileID: 8300000, guid: 92a55a7e68c7f449c936198e92349fd2, type: 3}
+  cloudJumpSound: {fileID: 8300000, guid: 179002ee76b434cf7a2f2dac8e484de1, type: 3}
   soundTrigger: {fileID: 537066230898841439}
 --- !u!61 &537066230898841439
 BoxCollider2D:
