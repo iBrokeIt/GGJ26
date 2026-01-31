@@ -41,12 +41,17 @@ public class AltarScript : MonoBehaviour
         Debug.Log("Player interacted with the altar!");
         if (!context.started || !playerInRange) return;
         int count = InventoryManager.Instance.GetItemCount("MAIN_COLLECTIBLE");
+        Debug.Log($"Player has {count} collectibles."); 
         if (count > 0)
         {
-            InventoryManager.Instance.RemoveItem("MAIN_COLLECTIBLE", 1);
             altarCollectibles[collectibleCount].SetActive(true);
+            InventoryManager.Instance.RemoveItem("MAIN_COLLECTIBLE", 1);
             collectibleCount += 1;
             // Show additional collectible visuals on the altar here
+        }
+        else {
+            Debug.Log("No collectibles to place on the altar.");
+            return;
         }
         if (collectibleCount >= 3)
         {
