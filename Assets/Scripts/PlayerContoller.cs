@@ -1,5 +1,3 @@
-using System;
-using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,6 +17,8 @@ public class PlayerContoller : MonoBehaviour
     private float jumpTimeCounter;
     private float lastStepTime;
     public bool allowUp;
+    public float xOffsetFlip;
+    private float direction;
 
     Rigidbody2D rb;
 
@@ -26,7 +26,6 @@ public class PlayerContoller : MonoBehaviour
     [System.NonSerialized]
     public bool isGrabbingRope;
     Animator animator;
-    SpriteRenderer spriteRenderer;
     float meanSpeed;
 
 
@@ -41,12 +40,12 @@ public class PlayerContoller : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        animator = GetComponentInChildren<Animator>();
         isGrounded = false;
         isJumping = false;
         platformRb = null;
         isGrabbingRope = false;
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        direction = 1f;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -93,8 +92,16 @@ public class PlayerContoller : MonoBehaviour
         meanSpeed = meanSpeed * 0.67f + speed * 0.33f;
         animator.SetFloat("speed", meanSpeed);
         // Flip sprite based on movement direction, but only if there is some movement
-        if (rb.linearVelocityX != 0) {
-            spriteRenderer.flipX = rb.linearVelocityX < 0;
+        float currDirection = Mathf.Sign(rb.linearVelocityX);
+        if (Mathf.Abs(rb.linearVelocityX) > 0.1f && currDirection != direction)
+        {
+            direction = currDirection;
+            Vector3 scale = transform.localScale;
+            scale.x = direction * Mathf.Abs(scale.x);
+            transform.localScale = scale;
+            Vector3 pos = transform.localPosition;
+            pos.x += Mathf.Sign(rb.linearVelocityX) * xOffsetFlip;
+            transform.localPosition = pos;
         }
         
         animator.SetFloat("verticalSpeed", rb.linearVelocityY);

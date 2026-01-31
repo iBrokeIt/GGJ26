@@ -5519,7 +5519,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: MANAGERS
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8916512818347895103, guid: 8c30a67bbc44b4d58a2aa47c5777ae58, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5611,6 +5612,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f83c58e5db44cce9c3b87e4457adaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 518996498}
+  collectibleSounds: []
+  finishSound: {fileID: 0}
+  interactionCooldown: 1
 --- !u!212 &1909648793
 SpriteRenderer:
   m_ObjectHideFlags: 0

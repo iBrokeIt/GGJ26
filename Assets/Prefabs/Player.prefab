@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2400671475094436669}
+  - component: {fileID: 3628007294248038375}
   - component: {fileID: 8749997696245055998}
   - component: {fileID: 3491743000808972194}
   - component: {fileID: 5957763165884883474}
   - component: {fileID: -4876126654812110163}
-  - component: {fileID: 3628007294248038375}
   - component: {fileID: 7999882188587071704}
   m_Layer: 20
   m_Name: Player
@@ -37,6 +37,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3628007294248038375
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6202048264419796871}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f888b6a356695e941af0de1cf1c3146c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &8749997696245055998
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -114,6 +136,7 @@ MonoBehaviour:
   jumpAction: {fileID: 0}
   interactAction: {fileID: 0}
   allowUp: 0
+  xOffsetFlip: 1
 --- !u!50 &5957763165884883474
 Rigidbody2D:
   serializedVersion: 5
@@ -187,28 +210,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0efd068b7bb92440f9540e793e185676, type: 3}
   - {fileID: 8300000, guid: 5a219ace539fb4bd1aef612e70869f76, type: 3}
   - {fileID: 8300000, guid: 67f34ef69ae524d858a96a770b50085c, type: 3}
---- !u!95 &3628007294248038375
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6202048264419796871}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f888b6a356695e941af0de1cf1c3146c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!70 &7999882188587071704
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -243,6 +244,6 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 10.89, y: 15.381785}
+  m_Offset: {x: -4.2865224, y: 7.9179473}
+  m_Size: {x: 9.244674, y: 15.479625}
   m_Direction: 0
