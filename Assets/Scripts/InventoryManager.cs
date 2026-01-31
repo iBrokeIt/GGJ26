@@ -40,6 +40,18 @@ public class InventoryManager : MonoBehaviour
         OnInventoryChanged?.Invoke(itemName, newAmount);
     }
 
+    public void RemoveItem(string itemName, int amount = 1)
+    {
+        if (inventory.ContainsKey(itemName))
+        {
+            inventory[itemName] -= amount;
+            if (inventory[itemName] < 0)
+                inventory[itemName] = 0;
+            Debug.Log($"Removed: {itemName}. Total: {inventory[itemName]}");
+            OnInventoryChanged?.Invoke(itemName, inventory[itemName]);
+        }
+    }
+
     public int GetItemCount(string itemName)
     {
         if (inventory.ContainsKey(itemName))

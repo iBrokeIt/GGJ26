@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 0bae925ea6671404b8b321b5cbd54143
+guid: cc3d77c853a2643ba9982302972cd28f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4986524983133201651
-    second: APAADI BLOCK_0
+      213: 3480898993675136909
+    second: Yoruba_orb_0
+  - first:
+      213: -8865752843736588398
+    second: Yoruba_orb_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -111,12 +114,56 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Yoruba_orb_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 1515
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8f65013133ae4030800000000000000
+      internalID: 3480898993675136909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yoruba_orb_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 326
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29fdbaae2c486f480800000000000000
+      internalID: -8865752843736588398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c6ad62b81189d4a06a369cea3a9111d1
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -126,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      APAADI BLOCK_0: -4986524983133201651
+      Yoruba_orb_0: 3480898993675136909
+      Yoruba_orb_1: -8865752843736588398
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

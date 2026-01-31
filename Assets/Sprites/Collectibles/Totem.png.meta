@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0bae925ea6671404b8b321b5cbd54143
+guid: 78208b13dc48041458f9f4c9415a0f18
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4986524983133201651
-    second: APAADI BLOCK_0
+      213: -464344498758391414
+    second: Totem_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -111,12 +111,34 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Totem_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 27
+        width: 1306
+        height: 3205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a89691a73215e89f0800000000000000
+      internalID: -464344498758391414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c6ad62b81189d4a06a369cea3a9111d1
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -126,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      APAADI BLOCK_0: -4986524983133201651
+      Totem_0: -464344498758391414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

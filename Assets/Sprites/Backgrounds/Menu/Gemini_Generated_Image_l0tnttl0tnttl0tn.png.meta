@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0bae925ea6671404b8b321b5cbd54143
+guid: e73dc0cfddffdf748901cd6aab7bc887
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4986524983133201651
-    second: APAADI BLOCK_0
+      213: 1634377334953895248
+    second: Gemini_Generated_Image_l0tnttl0tnttl0tn_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,27 +96,36 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Gemini_Generated_Image_l0tnttl0tnttl0tn_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1248
+        height: 832
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05560eed6897ea610800000000000000
+      internalID: 1634377334953895248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c6ad62b81189d4a06a369cea3a9111d1
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -126,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      APAADI BLOCK_0: -4986524983133201651
+      Gemini_Generated_Image_l0tnttl0tnttl0tn_0: 1634377334953895248
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

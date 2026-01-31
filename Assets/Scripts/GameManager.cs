@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,8 +9,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Configuration")]
     public InputActionReference resetAction;
-    [SerializeField] GameObject player;
 
+
+    private GameObject CurrentPlayer;
     private Vector2 lastCheckpointPos;
     void Awake()
     {
@@ -26,6 +28,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void RegisterPlayer(GameObject player)
+    {
+        CurrentPlayer = player;
+        Debug.Log("Player registered in GameManager!");
+    }
+
     public void UpdateCheckpoint(Vector2 newPos)
     {
         lastCheckpointPos = newPos;
@@ -33,9 +41,9 @@ public class GameManager : MonoBehaviour
 
     public void Respawn()
     {
-        player.transform.position = lastCheckpointPos;
+        CurrentPlayer.transform.position = lastCheckpointPos;
 
-        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+        Rigidbody2D rb = CurrentPlayer.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             rb.linearVelocity = Vector2.zero;
@@ -44,10 +52,25 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (resetAction.action.IsPressed())
+        if (CurrentPlayer && resetAction.action.IsPressed())
         {
             Respawn();
             DimensionSwitcher.Instance.SwitchToDimension(0);
         }
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void GoToHotKeys()
+    {
+        SceneManager.LoadScene("HotKeys");
     }
 }
