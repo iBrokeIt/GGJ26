@@ -167,7 +167,8 @@ public class PlayerContoller : MonoBehaviour
             return 0f;
         }
         Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
-        return moveInput.x;
+        float x = moveInput.x;
+        return Mathf.Abs(x) > 0.1f ? Mathf.Sign(x) : 0f;
     }
 
     public bool IsGoUp()
