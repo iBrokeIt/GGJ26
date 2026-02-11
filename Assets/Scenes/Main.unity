@@ -9490,6 +9490,10 @@ PrefabInstance:
       propertyPath: interactAction
       value: 
       objectReference: {fileID: 805249590}
+    - target: {fileID: 5957763165884883474, guid: 2974184e232b846e3862a7a159375077, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6202048264419796871, guid: 2974184e232b846e3862a7a159375077, type: 3}
       propertyPath: m_Name
       value: Player

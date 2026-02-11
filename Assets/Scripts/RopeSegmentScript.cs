@@ -66,9 +66,9 @@ public class RopeSegmentScript : MonoBehaviour
     }
 
     void OnTriggerStay2D(Collider2D other) {
-        if (player == null 
+        if (player == null
         && cooldownTimer <= 0
-        && other.CompareTag("Player") 
+        && other.CompareTag("Player")
         && other.GetComponent<PlayerContoller>().jumpAction.action.IsPressed()) {
             player = other.gameObject;
             Rigidbody2D playerRb = player.GetComponent<Rigidbody2D>();

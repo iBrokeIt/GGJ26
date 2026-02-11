@@ -2,25 +2,14 @@ using UnityEngine;
 
 public class TrampolineScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public float bounceForce = 10f;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player_Feet"))
         {
-            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-            rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
+            Rigidbody2D rb = other.attachedRigidbody;
+            rb.linearVelocityY = bounceForce;
         }
     }
 }
