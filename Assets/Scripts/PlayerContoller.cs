@@ -6,23 +6,25 @@ public class PlayerContoller : MonoBehaviour
     public AudioClip stepSound; // TODO: remove
     public float moveSpeed = 5f;
     public float jumpForce;
-    public float jumpAssist;
-    public float jumpDuration = 0.35f;
+    public float coyoteTime = 0.08f;
+    public float jumpBufferTime = 0.1f;
+    public float jumpCutMultiplier = 0.4f;
     public float stepCooldown = 0.35f;
     public InputActionReference moveAction;
     public InputActionReference jumpAction;
     public InputActionReference interactAction;
-    private bool isGrounded;
+    public GroundCheck groundCheck;
     private bool isJumping;
-    private float jumpTimeCounter;
+    private bool wasGrounded;
+    private bool wasJumpPressed;
+    private float coyoteTimer;
+    private float jumpBufferTimer;
     private float lastStepTime;
     public bool allowUp;
     public float xOffsetFlip;
     private float direction;
 
     Rigidbody2D rb;
-
-    Rigidbody2D platformRb;
     [System.NonSerialized]
     public bool isGrabbingRope;
     Animator animator;
@@ -41,45 +43,29 @@ public class PlayerContoller : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
-        isGrounded = false;
         isJumping = false;
-        platformRb = null;
+        wasGrounded = false;
         isGrabbingRope = false;
         direction = 1f;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void FixedUpdate()
     {
-        if (collision.gameObject.CompareTag("Floor"))
+        bool isGrounded = groundCheck.IsGrounded;
+        Rigidbody2D platformRb = groundCheck.PlatformRb;
+
+        // Detect landing for animations
+        if (!wasGrounded && isGrounded)
         {
-            isGrounded = true;
             isJumping = false;
-            platformRb = collision.gameObject.GetComponent<Rigidbody2D>();
             animator.SetTrigger("hitFloor");
             animator.ResetTrigger("jumping");
         }
-    }
+        wasGrounded = isGrounded;
 
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Floor"))
-        {
-            isGrounded = false;
-            if (isJumping)
-            {
-                jumpTimeCounter = jumpDuration;
-                animator.SetTrigger("jumping");
-                animator.ResetTrigger("hitFloor");
-            }
-            platformRb = null;
-        }
-    }
-
-    void FixedUpdate()
-    {
         float speed = 0;
         if (!isGrabbingRope) {
-            GroundMovement();
+            GroundMovement(isGrounded, platformRb);
             if (isGrounded) {
                 speed = rb.linearVelocityX;
                 if (platformRb != null) {
@@ -112,9 +98,8 @@ public class PlayerContoller : MonoBehaviour
             rb.linearVelocityY = jumpForce;
         }
     }
-    void GroundMovement()
+    void GroundMovement(bool isGrounded, Rigidbody2D platformRb)
     {
-        // If no InputAction assigned, fall back to keyboard/gamepad probing
         float baseVelocityX = GetHorizontalDirection() * moveSpeed;
         if(Mathf.Abs(baseVelocityX) > 0.1f && isGrounded)
         {
@@ -125,16 +110,40 @@ public class PlayerContoller : MonoBehaviour
             baseVelocityX += platformRb.linearVelocityX;
         }
         rb.linearVelocityX = baseVelocityX;
-        bool isJumpPressed = IsJumpPressed();
-        if (isJumpPressed && isGrounded && !isJumping)
+
+        // --- Jump ---
+        bool jumpPressed = IsJumpPressed();
+        bool jumpPressedThisFrame = jumpPressed && !wasJumpPressed;
+        wasJumpPressed = jumpPressed;
+
+        // Coyote time: refresh while grounded, tick down while airborne
+        if (isGrounded)
+            coyoteTimer = coyoteTime;
+        else
+            coyoteTimer -= Time.fixedDeltaTime;
+
+        // Jump buffer: set on press, tick down each frame
+        if (jumpPressedThisFrame)
+            jumpBufferTimer = jumpBufferTime;
+        else
+            jumpBufferTimer -= Time.fixedDeltaTime;
+
+        // Initiate jump when buffer and coyote are both active
+        if (jumpBufferTimer > 0 && coyoteTimer > 0 && !isJumping)
         {
             isJumping = true;
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rb.linearVelocityY = jumpForce;
+            jumpBufferTimer = 0;
+            coyoteTimer = 0;
+            animator.SetTrigger("jumping");
+            animator.ResetTrigger("hitFloor");
         }
-        if (jumpTimeCounter > 0 && isJumpPressed)
+
+        // Variable jump height: cut upward velocity on early release
+        if (!jumpPressed && isJumping && rb.linearVelocityY > 0)
         {
-            rb.AddForce(Vector2.up * jumpAssist * Time.deltaTime, ForceMode2D.Impulse);
-            jumpTimeCounter -= Time.deltaTime;
+            rb.linearVelocityY *= jumpCutMultiplier;
+            isJumping = false;
         }
     }
 
