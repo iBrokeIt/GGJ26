@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Floor
+  - Player_Feet
   layers:
   - Default
   - TransparentFX
