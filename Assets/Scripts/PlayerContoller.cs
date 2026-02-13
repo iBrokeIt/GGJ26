@@ -9,6 +9,7 @@ public class PlayerContoller : MonoBehaviour
     public float coyoteTime = 0.08f;
     public float jumpBufferTime = 0.1f;
     public float jumpCutMultiplier = 0.4f;
+    public float landingCooldown = 0.15f;
     public float stepCooldown = 0.35f;
     public InputActionReference moveAction;
     public InputActionReference jumpAction;
@@ -20,6 +21,7 @@ public class PlayerContoller : MonoBehaviour
     private float coyoteTimer;
     private float jumpBufferTimer;
     private float lastStepTime;
+    private float landingCooldownTimer;
     public bool allowUp;
     public float xOffsetFlip;
     private float direction;
@@ -36,6 +38,15 @@ public class PlayerContoller : MonoBehaviour
         if (GameManager.Instance != null)
         {
             GameManager.Instance.RegisterPlayer(this.gameObject);
+        }
+        else
+        {
+            Debug.Log("No GameManager found. Not assigning player");
+        }
+
+        if(!AudioManager.Instance)
+        {
+            Debug.Log("No Audio Manager found. No audios will be played by player");
         }
     }
 
@@ -58,9 +69,11 @@ public class PlayerContoller : MonoBehaviour
         if (!wasGrounded && isGrounded)
         {
             isJumping = false;
+            landingCooldownTimer = landingCooldown;
             animator.SetTrigger("hitFloor");
             animator.ResetTrigger("jumping");
         }
+        landingCooldownTimer -= Time.fixedDeltaTime;
         wasGrounded = isGrounded;
 
         float speed = 0;
@@ -128,8 +141,8 @@ public class PlayerContoller : MonoBehaviour
         else
             jumpBufferTimer -= Time.fixedDeltaTime;
 
-        // Initiate jump when buffer and coyote are both active
-        if (jumpBufferTimer > 0 && coyoteTimer > 0 && !isJumping)
+        // Initiate jump when buffer and coyote are both active (and landing cooldown expired)
+        if (jumpBufferTimer > 0 && coyoteTimer > 0 && !isJumping && landingCooldownTimer <= 0)
         {
             isJumping = true;
             rb.linearVelocityY = jumpForce;
@@ -181,9 +194,15 @@ public class PlayerContoller : MonoBehaviour
 
     private void PlayWalkingSound()
     {
+        if(!stepSound)
+        {
+            Debug.Log("No walking sound assigned. Not playing walking sound");
+            return;
+        }
+
         if (Time.time - lastStepTime > stepCooldown)
         {
-            AudioManager.Instance.PlayRandomizedSFX(stepSound);
+            AudioManager.Instance?.PlayRandomizedSFX(stepSound);
             lastStepTime = Time.time;
         }
     }
