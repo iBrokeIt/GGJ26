@@ -79,7 +79,12 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("HotKeys");
         PlayClickSound();
+    }
 
+    public void StartTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+        PlayClickSound();
     }
 
     public void PlayClickSound()
