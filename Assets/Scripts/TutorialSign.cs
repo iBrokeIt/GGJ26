@@ -22,6 +22,7 @@ public class TutorialSign : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("SIGNNNNNN");
         if (other.CompareTag("Player") && signText != null)
         {
             if (fadeCoroutine != null) StopCoroutine(fadeCoroutine);

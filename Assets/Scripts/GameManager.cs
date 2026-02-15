@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (CurrentPlayer && resetAction.action.IsPressed())
+        if (CurrentPlayer && resetAction?.action?.IsPressed() == true)
         {
             Respawn();
             DimensionSwitcher.Instance.SwitchToDimension(0);
