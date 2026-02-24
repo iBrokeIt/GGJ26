@@ -14,7 +14,7 @@ public class TutorialEndZone : MonoBehaviour
 
     private void LoadScene()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Menu");
     }
     
 }

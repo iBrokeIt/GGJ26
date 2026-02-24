@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour
 
     public void StartTutorial()
     {
+        Debug.Log("Starting Tutorial...");
         SceneManager.LoadScene("Tutorial");
         PlayClickSound();
     }

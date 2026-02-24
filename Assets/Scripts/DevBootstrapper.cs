@@ -1,12 +1,12 @@
 using UnityEngine;
 
 /// <summary>
-/// Automatically loads missing manager prefabs when entering Play mode from any scene.
-/// No setup needed — runs before any scene's Awake() via RuntimeInitializeOnLoadMethod.
+/// Editor-only: creates missing singletons when hitting Play on any scene.
+/// Does nothing if the singletons already exist (e.g., when coming from Menu).
 /// </summary>
 public static class DevBootstrapper
 {
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     static void Bootstrap()
     {
 #if UNITY_EDITOR
@@ -18,26 +18,16 @@ public static class DevBootstrapper
             Debug.Log("[DevBootstrapper] Created missing GameManager");
         }
 
-        LoadPrefabIfMissing<AudioManager>("Assets/Prefabs/MANAGERS.prefab");
-#endif
-    }
-
-    static void LoadPrefabIfMissing<T>(string prefabPath) where T : Object
-    {
-        if (Object.FindAnyObjectByType<T>() != null) return;
-
-#if UNITY_EDITOR
-        var prefab = UnityEditor.AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
-        if (prefab != null)
+        if (Object.FindAnyObjectByType<AudioManager>() == null)
         {
-            var go = Object.Instantiate(prefab);
-            go.name = prefab.name + " (DevBoot)";
-            Object.DontDestroyOnLoad(go);
-            Debug.Log($"[DevBootstrapper] Loaded missing {typeof(T).Name} from {prefabPath}");
-        }
-        else
-        {
-            Debug.LogWarning($"[DevBootstrapper] Prefab not found at {prefabPath}");
+            var prefab = UnityEditor.AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/MANAGERS.prefab");
+            if (prefab != null)
+            {
+                var go = Object.Instantiate(prefab);
+                go.name = "MANAGERS (DevBoot)";
+                Object.DontDestroyOnLoad(go);
+                Debug.Log("[DevBootstrapper] Loaded missing MANAGERS prefab");
+            }
         }
 #endif
     }
