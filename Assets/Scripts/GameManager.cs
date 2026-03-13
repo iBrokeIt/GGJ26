@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (CurrentPlayer && resetAction.action.IsPressed())
+        if (CurrentPlayer && resetAction?.action?.IsPressed() == true)
         {
             Respawn();
             DimensionSwitcher.Instance.SwitchToDimension(0);
@@ -79,7 +79,13 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("HotKeys");
         PlayClickSound();
+    }
 
+    public void StartTutorial()
+    {
+        Debug.Log("Starting Tutorial...");
+        SceneManager.LoadScene("Tutorial");
+        PlayClickSound();
     }
 
     public void PlayClickSound()
